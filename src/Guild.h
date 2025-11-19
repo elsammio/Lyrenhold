@@ -7,14 +7,13 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
 #include "Heroe.h"
 using namespace std;
 
 class Guild {
     private:
     string nombre;
-    array <Heroe> heroes;
+    //array <Heroe> heroes;
 
 };
 
