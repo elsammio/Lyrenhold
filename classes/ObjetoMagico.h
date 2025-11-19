@@ -4,9 +4,15 @@
 
 #ifndef LYRENHOLD_OBJETOMAGICO_H
 #define LYRENHOLD_OBJETOMAGICO_H
-
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
 
 class ObjetoMagico {
+    private:
+    string nombre;
+
 };
 
 

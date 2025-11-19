@@ -4,9 +4,16 @@
 
 #ifndef LYRENHOLD_POCIONVIDA_H
 #define LYRENHOLD_POCIONVIDA_H
-
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
 
 class PocionVida {
+    private:
+    int minCura;
+    int maxCura;
+
 };
 
 

@@ -4,9 +4,14 @@
 
 #ifndef LYRENHOLD_ARENA_H
 #define LYRENHOLD_ARENA_H
-
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
 
 class Arena {
+private:
+    int turno;
 };
 
 
