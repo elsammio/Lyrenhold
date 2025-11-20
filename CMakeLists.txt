@@ -31,4 +31,10 @@ add_executable(Lyrenhold main.cpp
         src/AmuletoFuria.cpp
         src/AmuletoFuria.h
         src/EscudoBendito.cpp
-        src/EscudoBendito.h)
+        src/EscudoBendito.h
+        src/EscudoReflectivo.cpp
+        src/EscudoReflectivo.h
+        src/PocionVeneno.cpp
+        src/PocionVeneno.h
+        src/Cancelacion.cpp
+        src/Cancelacion.h)
