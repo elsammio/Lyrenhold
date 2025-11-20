@@ -4,9 +4,12 @@
 
 #ifndef LYRENHOLD_MAGO_H
 #define LYRENHOLD_MAGO_H
+#include "Personaje.h"
 
-
-class Mago {
+class Mago : public Rol {
+public:
+    void ejecutarAccion(Personaje* aliado, Personaje* objetivo) override;
+    void hechizo();
 };
 
 

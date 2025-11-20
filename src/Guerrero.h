@@ -4,9 +4,12 @@
 
 #ifndef LYRENHOLD_GUERRERO_H
 #define LYRENHOLD_GUERRERO_H
+#include "Personaje.h"
 
-
-class Guerrero {
+class Guerrero : public Rol {
+public:
+    void ejecutarAccion(Personaje* aliado, Personaje* objetivo) override;
+    void ataqueCritico();
 };
 
 

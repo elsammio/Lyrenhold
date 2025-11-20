@@ -7,6 +7,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+
+#include "Rol.h"
 using namespace std;
 
 class Personaje {
@@ -16,11 +18,18 @@ private:
     int vida;
     int ataque;
     int defensa;
-    int rol;
+    Rol* rol;
 public:
     Personaje() {
 
     }
+public:
+    Personaje(std::string n, int nv, int v, int atk, int def, Rol* r)
+        : nombre(n), nivel(nv), vida(v), ataque(atk), defensa(def), rol(r) {}
+
+    virtual void realizarAccion() = 0;
+    bool estaVivo() { return vida > 0; }
+    virtual ~Personaje() { if (rol) delete rol; }
 };
 
 

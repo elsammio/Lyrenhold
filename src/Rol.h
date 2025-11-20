@@ -4,9 +4,12 @@
 
 #ifndef LYRENHOLD_ROL_H
 #define LYRENHOLD_ROL_H
-
+#include "Personaje.h"
 
 class Rol {
+public:
+    virtual void ejecutarAccion(Personaje* aliado, Personaje* objetivo) = 0;
+    virtual ~Rol() {};
 };
 
 
