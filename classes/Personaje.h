@@ -17,6 +17,10 @@ private:
     int ataque;
     int defensa;
     int rol;
+public:
+    Personaje() {
+
+    }
 };
 
 
