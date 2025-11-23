@@ -1,3 +1,3 @@
-C:/POO Proyecto final/Lyrenhold/cmake-build-debug/CMakeFiles/Lyrenhold.dir
-C:/POO Proyecto final/Lyrenhold/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/POO Proyecto final/Lyrenhold/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/JaverianaCaliPOO/Lyrenhold/Lyrenhold/cmake-build-debug/CMakeFiles/Lyrenhold.dir
+C:/JaverianaCaliPOO/Lyrenhold/Lyrenhold/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/JaverianaCaliPOO/Lyrenhold/Lyrenhold/cmake-build-debug/CMakeFiles/rebuild_cache.dir

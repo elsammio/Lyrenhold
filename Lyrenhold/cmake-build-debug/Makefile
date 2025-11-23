@@ -152,6 +152,150 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/Arena.obj: src/Arena.cpp.obj
+.PHONY : src/Arena.obj
+
+# target to build an object file
+src/Arena.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Arena.cpp.obj
+.PHONY : src/Arena.cpp.obj
+
+src/Arena.i: src/Arena.cpp.i
+.PHONY : src/Arena.i
+
+# target to preprocess a source file
+src/Arena.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Arena.cpp.i
+.PHONY : src/Arena.cpp.i
+
+src/Arena.s: src/Arena.cpp.s
+.PHONY : src/Arena.s
+
+# target to generate assembly for a file
+src/Arena.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Arena.cpp.s
+.PHONY : src/Arena.cpp.s
+
+src/Guerrero.obj: src/Guerrero.cpp.obj
+.PHONY : src/Guerrero.obj
+
+# target to build an object file
+src/Guerrero.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Guerrero.cpp.obj
+.PHONY : src/Guerrero.cpp.obj
+
+src/Guerrero.i: src/Guerrero.cpp.i
+.PHONY : src/Guerrero.i
+
+# target to preprocess a source file
+src/Guerrero.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Guerrero.cpp.i
+.PHONY : src/Guerrero.cpp.i
+
+src/Guerrero.s: src/Guerrero.cpp.s
+.PHONY : src/Guerrero.s
+
+# target to generate assembly for a file
+src/Guerrero.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Guerrero.cpp.s
+.PHONY : src/Guerrero.cpp.s
+
+src/Guild.obj: src/Guild.cpp.obj
+.PHONY : src/Guild.obj
+
+# target to build an object file
+src/Guild.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Guild.cpp.obj
+.PHONY : src/Guild.cpp.obj
+
+src/Guild.i: src/Guild.cpp.i
+.PHONY : src/Guild.i
+
+# target to preprocess a source file
+src/Guild.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Guild.cpp.i
+.PHONY : src/Guild.cpp.i
+
+src/Guild.s: src/Guild.cpp.s
+.PHONY : src/Guild.s
+
+# target to generate assembly for a file
+src/Guild.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Guild.cpp.s
+.PHONY : src/Guild.cpp.s
+
+src/Inventario.obj: src/Inventario.cpp.obj
+.PHONY : src/Inventario.obj
+
+# target to build an object file
+src/Inventario.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Inventario.cpp.obj
+.PHONY : src/Inventario.cpp.obj
+
+src/Inventario.i: src/Inventario.cpp.i
+.PHONY : src/Inventario.i
+
+# target to preprocess a source file
+src/Inventario.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Inventario.cpp.i
+.PHONY : src/Inventario.cpp.i
+
+src/Inventario.s: src/Inventario.cpp.s
+.PHONY : src/Inventario.s
+
+# target to generate assembly for a file
+src/Inventario.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Inventario.cpp.s
+.PHONY : src/Inventario.cpp.s
+
+src/Mago.obj: src/Mago.cpp.obj
+.PHONY : src/Mago.obj
+
+# target to build an object file
+src/Mago.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Mago.cpp.obj
+.PHONY : src/Mago.cpp.obj
+
+src/Mago.i: src/Mago.cpp.i
+.PHONY : src/Mago.i
+
+# target to preprocess a source file
+src/Mago.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Mago.cpp.i
+.PHONY : src/Mago.cpp.i
+
+src/Mago.s: src/Mago.cpp.s
+.PHONY : src/Mago.s
+
+# target to generate assembly for a file
+src/Mago.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Mago.cpp.s
+.PHONY : src/Mago.cpp.s
+
+src/ObjetoMagico.obj: src/ObjetoMagico.cpp.obj
+.PHONY : src/ObjetoMagico.obj
+
+# target to build an object file
+src/ObjetoMagico.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/ObjetoMagico.cpp.obj
+.PHONY : src/ObjetoMagico.cpp.obj
+
+src/ObjetoMagico.i: src/ObjetoMagico.cpp.i
+.PHONY : src/ObjetoMagico.i
+
+# target to preprocess a source file
+src/ObjetoMagico.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/ObjetoMagico.cpp.i
+.PHONY : src/ObjetoMagico.cpp.i
+
+src/ObjetoMagico.s: src/ObjetoMagico.cpp.s
+.PHONY : src/ObjetoMagico.s
+
+# target to generate assembly for a file
+src/ObjetoMagico.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/ObjetoMagico.cpp.s
+.PHONY : src/ObjetoMagico.cpp.s
+
 src/Personaje.obj: src/Personaje.cpp.obj
 .PHONY : src/Personaje.obj
 
@@ -176,6 +320,30 @@ src/Personaje.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Personaje.cpp.s
 .PHONY : src/Personaje.cpp.s
 
+src/Sanador.obj: src/Sanador.cpp.obj
+.PHONY : src/Sanador.obj
+
+# target to build an object file
+src/Sanador.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Sanador.cpp.obj
+.PHONY : src/Sanador.cpp.obj
+
+src/Sanador.i: src/Sanador.cpp.i
+.PHONY : src/Sanador.i
+
+# target to preprocess a source file
+src/Sanador.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Sanador.cpp.i
+.PHONY : src/Sanador.cpp.i
+
+src/Sanador.s: src/Sanador.cpp.s
+.PHONY : src/Sanador.s
+
+# target to generate assembly for a file
+src/Sanador.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Sanador.cpp.s
+.PHONY : src/Sanador.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -188,9 +356,30 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/Arena.obj
+	@echo ... src/Arena.i
+	@echo ... src/Arena.s
+	@echo ... src/Guerrero.obj
+	@echo ... src/Guerrero.i
+	@echo ... src/Guerrero.s
+	@echo ... src/Guild.obj
+	@echo ... src/Guild.i
+	@echo ... src/Guild.s
+	@echo ... src/Inventario.obj
+	@echo ... src/Inventario.i
+	@echo ... src/Inventario.s
+	@echo ... src/Mago.obj
+	@echo ... src/Mago.i
+	@echo ... src/Mago.s
+	@echo ... src/ObjetoMagico.obj
+	@echo ... src/ObjetoMagico.i
+	@echo ... src/ObjetoMagico.s
 	@echo ... src/Personaje.obj
 	@echo ... src/Personaje.i
 	@echo ... src/Personaje.s
+	@echo ... src/Sanador.obj
+	@echo ... src/Sanador.i
+	@echo ... src/Sanador.s
 .PHONY : help
 
 
