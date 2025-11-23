@@ -152,6 +152,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/Personaje.obj: src/Personaje.cpp.obj
+.PHONY : src/Personaje.obj
+
+# target to build an object file
+src/Personaje.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Personaje.cpp.obj
+.PHONY : src/Personaje.cpp.obj
+
+src/Personaje.i: src/Personaje.cpp.i
+.PHONY : src/Personaje.i
+
+# target to preprocess a source file
+src/Personaje.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Personaje.cpp.i
+.PHONY : src/Personaje.cpp.i
+
+src/Personaje.s: src/Personaje.cpp.s
+.PHONY : src/Personaje.s
+
+# target to generate assembly for a file
+src/Personaje.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Personaje.cpp.s
+.PHONY : src/Personaje.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -164,6 +188,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/Personaje.obj
+	@echo ... src/Personaje.i
+	@echo ... src/Personaje.s
 .PHONY : help
 
 

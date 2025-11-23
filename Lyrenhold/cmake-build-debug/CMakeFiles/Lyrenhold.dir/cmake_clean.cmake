@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Lyrenhold.dir/main.cpp.obj"
   "CMakeFiles/Lyrenhold.dir/main.cpp.obj.d"
+  "CMakeFiles/Lyrenhold.dir/src/Personaje.cpp.obj"
+  "CMakeFiles/Lyrenhold.dir/src/Personaje.cpp.obj.d"
   "Lyrenhold.exe"
   "Lyrenhold.exe.manifest"
   "Lyrenhold.pdb"

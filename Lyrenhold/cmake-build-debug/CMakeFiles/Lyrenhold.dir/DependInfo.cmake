@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/JaverianaCaliPOO/Lyrenhold/Lyrenhold/main.cpp" "CMakeFiles/Lyrenhold.dir/main.cpp.obj" "gcc" "CMakeFiles/Lyrenhold.dir/main.cpp.obj.d"
+  "C:/JaverianaCaliPOO/Lyrenhold/Lyrenhold/src/Personaje.cpp" "CMakeFiles/Lyrenhold.dir/src/Personaje.cpp.obj" "gcc" "CMakeFiles/Lyrenhold.dir/src/Personaje.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

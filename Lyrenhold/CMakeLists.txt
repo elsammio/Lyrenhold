@@ -3,4 +3,6 @@ project(Lyrenhold)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Lyrenhold main.cpp)
+add_executable(Lyrenhold main.cpp
+        src/Personaje.cpp
+        src/Personaje.h)
