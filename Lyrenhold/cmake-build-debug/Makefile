@@ -152,6 +152,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/AmuletoFuria.obj: src/AmuletoFuria.cpp.obj
+.PHONY : src/AmuletoFuria.obj
+
+# target to build an object file
+src/AmuletoFuria.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/AmuletoFuria.cpp.obj
+.PHONY : src/AmuletoFuria.cpp.obj
+
+src/AmuletoFuria.i: src/AmuletoFuria.cpp.i
+.PHONY : src/AmuletoFuria.i
+
+# target to preprocess a source file
+src/AmuletoFuria.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/AmuletoFuria.cpp.i
+.PHONY : src/AmuletoFuria.cpp.i
+
+src/AmuletoFuria.s: src/AmuletoFuria.cpp.s
+.PHONY : src/AmuletoFuria.s
+
+# target to generate assembly for a file
+src/AmuletoFuria.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/AmuletoFuria.cpp.s
+.PHONY : src/AmuletoFuria.cpp.s
+
 src/Arena.obj: src/Arena.cpp.obj
 .PHONY : src/Arena.obj
 
@@ -175,6 +199,78 @@ src/Arena.s: src/Arena.cpp.s
 src/Arena.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Arena.cpp.s
 .PHONY : src/Arena.cpp.s
+
+src/Cancelacion.obj: src/Cancelacion.cpp.obj
+.PHONY : src/Cancelacion.obj
+
+# target to build an object file
+src/Cancelacion.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Cancelacion.cpp.obj
+.PHONY : src/Cancelacion.cpp.obj
+
+src/Cancelacion.i: src/Cancelacion.cpp.i
+.PHONY : src/Cancelacion.i
+
+# target to preprocess a source file
+src/Cancelacion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Cancelacion.cpp.i
+.PHONY : src/Cancelacion.cpp.i
+
+src/Cancelacion.s: src/Cancelacion.cpp.s
+.PHONY : src/Cancelacion.s
+
+# target to generate assembly for a file
+src/Cancelacion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Cancelacion.cpp.s
+.PHONY : src/Cancelacion.cpp.s
+
+src/EscudoBendito.obj: src/EscudoBendito.cpp.obj
+.PHONY : src/EscudoBendito.obj
+
+# target to build an object file
+src/EscudoBendito.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/EscudoBendito.cpp.obj
+.PHONY : src/EscudoBendito.cpp.obj
+
+src/EscudoBendito.i: src/EscudoBendito.cpp.i
+.PHONY : src/EscudoBendito.i
+
+# target to preprocess a source file
+src/EscudoBendito.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/EscudoBendito.cpp.i
+.PHONY : src/EscudoBendito.cpp.i
+
+src/EscudoBendito.s: src/EscudoBendito.cpp.s
+.PHONY : src/EscudoBendito.s
+
+# target to generate assembly for a file
+src/EscudoBendito.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/EscudoBendito.cpp.s
+.PHONY : src/EscudoBendito.cpp.s
+
+src/EscudoReflectivo.obj: src/EscudoReflectivo.cpp.obj
+.PHONY : src/EscudoReflectivo.obj
+
+# target to build an object file
+src/EscudoReflectivo.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/EscudoReflectivo.cpp.obj
+.PHONY : src/EscudoReflectivo.cpp.obj
+
+src/EscudoReflectivo.i: src/EscudoReflectivo.cpp.i
+.PHONY : src/EscudoReflectivo.i
+
+# target to preprocess a source file
+src/EscudoReflectivo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/EscudoReflectivo.cpp.i
+.PHONY : src/EscudoReflectivo.cpp.i
+
+src/EscudoReflectivo.s: src/EscudoReflectivo.cpp.s
+.PHONY : src/EscudoReflectivo.s
+
+# target to generate assembly for a file
+src/EscudoReflectivo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/EscudoReflectivo.cpp.s
+.PHONY : src/EscudoReflectivo.cpp.s
 
 src/Guerrero.obj: src/Guerrero.cpp.obj
 .PHONY : src/Guerrero.obj
@@ -320,6 +416,54 @@ src/Personaje.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/Personaje.cpp.s
 .PHONY : src/Personaje.cpp.s
 
+src/PocionVeneno.obj: src/PocionVeneno.cpp.obj
+.PHONY : src/PocionVeneno.obj
+
+# target to build an object file
+src/PocionVeneno.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/PocionVeneno.cpp.obj
+.PHONY : src/PocionVeneno.cpp.obj
+
+src/PocionVeneno.i: src/PocionVeneno.cpp.i
+.PHONY : src/PocionVeneno.i
+
+# target to preprocess a source file
+src/PocionVeneno.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/PocionVeneno.cpp.i
+.PHONY : src/PocionVeneno.cpp.i
+
+src/PocionVeneno.s: src/PocionVeneno.cpp.s
+.PHONY : src/PocionVeneno.s
+
+# target to generate assembly for a file
+src/PocionVeneno.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/PocionVeneno.cpp.s
+.PHONY : src/PocionVeneno.cpp.s
+
+src/PocionVida.obj: src/PocionVida.cpp.obj
+.PHONY : src/PocionVida.obj
+
+# target to build an object file
+src/PocionVida.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/PocionVida.cpp.obj
+.PHONY : src/PocionVida.cpp.obj
+
+src/PocionVida.i: src/PocionVida.cpp.i
+.PHONY : src/PocionVida.i
+
+# target to preprocess a source file
+src/PocionVida.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/PocionVida.cpp.i
+.PHONY : src/PocionVida.cpp.i
+
+src/PocionVida.s: src/PocionVida.cpp.s
+.PHONY : src/PocionVida.s
+
+# target to generate assembly for a file
+src/PocionVida.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lyrenhold.dir\build.make CMakeFiles/Lyrenhold.dir/src/PocionVida.cpp.s
+.PHONY : src/PocionVida.cpp.s
+
 src/Sanador.obj: src/Sanador.cpp.obj
 .PHONY : src/Sanador.obj
 
@@ -356,9 +500,21 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/AmuletoFuria.obj
+	@echo ... src/AmuletoFuria.i
+	@echo ... src/AmuletoFuria.s
 	@echo ... src/Arena.obj
 	@echo ... src/Arena.i
 	@echo ... src/Arena.s
+	@echo ... src/Cancelacion.obj
+	@echo ... src/Cancelacion.i
+	@echo ... src/Cancelacion.s
+	@echo ... src/EscudoBendito.obj
+	@echo ... src/EscudoBendito.i
+	@echo ... src/EscudoBendito.s
+	@echo ... src/EscudoReflectivo.obj
+	@echo ... src/EscudoReflectivo.i
+	@echo ... src/EscudoReflectivo.s
 	@echo ... src/Guerrero.obj
 	@echo ... src/Guerrero.i
 	@echo ... src/Guerrero.s
@@ -377,6 +533,12 @@ help:
 	@echo ... src/Personaje.obj
 	@echo ... src/Personaje.i
 	@echo ... src/Personaje.s
+	@echo ... src/PocionVeneno.obj
+	@echo ... src/PocionVeneno.i
+	@echo ... src/PocionVeneno.s
+	@echo ... src/PocionVida.obj
+	@echo ... src/PocionVida.i
+	@echo ... src/PocionVida.s
 	@echo ... src/Sanador.obj
 	@echo ... src/Sanador.i
 	@echo ... src/Sanador.s

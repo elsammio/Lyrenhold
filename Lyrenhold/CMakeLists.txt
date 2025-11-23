@@ -19,4 +19,16 @@ add_executable(Lyrenhold main.cpp
         src/Mago.cpp
         src/Mago.h
         src/Guerrero.cpp
-        src/Guerrero.h)
+        src/Guerrero.h
+        src/PocionVida.cpp
+        src/PocionVida.h
+        src/AmuletoFuria.cpp
+        src/AmuletoFuria.h
+        src/EscudoBendito.cpp
+        src/EscudoBendito.h
+        src/EscudoReflectivo.cpp
+        src/EscudoReflectivo.h
+        src/PocionVeneno.cpp
+        src/PocionVeneno.h
+        src/Cancelacion.cpp
+        src/Cancelacion.h)

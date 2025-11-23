@@ -194,6 +194,90 @@ CMakeFiles/Lyrenhold.dir/src/Guerrero.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lyrenhold.dir/src/Guerrero.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\Guerrero.cpp -o CMakeFiles\Lyrenhold.dir\src\Guerrero.cpp.s
 
+CMakeFiles/Lyrenhold.dir/src/PocionVida.cpp.obj: CMakeFiles/Lyrenhold.dir/flags.make
+CMakeFiles/Lyrenhold.dir/src/PocionVida.cpp.obj: C:/JaverianaCaliPOO/Lyrenhold/Lyrenhold/src/PocionVida.cpp
+CMakeFiles/Lyrenhold.dir/src/PocionVida.cpp.obj: CMakeFiles/Lyrenhold.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Lyrenhold.dir/src/PocionVida.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lyrenhold.dir/src/PocionVida.cpp.obj -MF CMakeFiles\Lyrenhold.dir\src\PocionVida.cpp.obj.d -o CMakeFiles\Lyrenhold.dir\src\PocionVida.cpp.obj -c C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\PocionVida.cpp
+
+CMakeFiles/Lyrenhold.dir/src/PocionVida.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lyrenhold.dir/src/PocionVida.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\PocionVida.cpp > CMakeFiles\Lyrenhold.dir\src\PocionVida.cpp.i
+
+CMakeFiles/Lyrenhold.dir/src/PocionVida.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lyrenhold.dir/src/PocionVida.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\PocionVida.cpp -o CMakeFiles\Lyrenhold.dir\src\PocionVida.cpp.s
+
+CMakeFiles/Lyrenhold.dir/src/AmuletoFuria.cpp.obj: CMakeFiles/Lyrenhold.dir/flags.make
+CMakeFiles/Lyrenhold.dir/src/AmuletoFuria.cpp.obj: C:/JaverianaCaliPOO/Lyrenhold/Lyrenhold/src/AmuletoFuria.cpp
+CMakeFiles/Lyrenhold.dir/src/AmuletoFuria.cpp.obj: CMakeFiles/Lyrenhold.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Lyrenhold.dir/src/AmuletoFuria.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lyrenhold.dir/src/AmuletoFuria.cpp.obj -MF CMakeFiles\Lyrenhold.dir\src\AmuletoFuria.cpp.obj.d -o CMakeFiles\Lyrenhold.dir\src\AmuletoFuria.cpp.obj -c C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\AmuletoFuria.cpp
+
+CMakeFiles/Lyrenhold.dir/src/AmuletoFuria.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lyrenhold.dir/src/AmuletoFuria.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\AmuletoFuria.cpp > CMakeFiles\Lyrenhold.dir\src\AmuletoFuria.cpp.i
+
+CMakeFiles/Lyrenhold.dir/src/AmuletoFuria.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lyrenhold.dir/src/AmuletoFuria.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\AmuletoFuria.cpp -o CMakeFiles\Lyrenhold.dir\src\AmuletoFuria.cpp.s
+
+CMakeFiles/Lyrenhold.dir/src/EscudoBendito.cpp.obj: CMakeFiles/Lyrenhold.dir/flags.make
+CMakeFiles/Lyrenhold.dir/src/EscudoBendito.cpp.obj: C:/JaverianaCaliPOO/Lyrenhold/Lyrenhold/src/EscudoBendito.cpp
+CMakeFiles/Lyrenhold.dir/src/EscudoBendito.cpp.obj: CMakeFiles/Lyrenhold.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Lyrenhold.dir/src/EscudoBendito.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lyrenhold.dir/src/EscudoBendito.cpp.obj -MF CMakeFiles\Lyrenhold.dir\src\EscudoBendito.cpp.obj.d -o CMakeFiles\Lyrenhold.dir\src\EscudoBendito.cpp.obj -c C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\EscudoBendito.cpp
+
+CMakeFiles/Lyrenhold.dir/src/EscudoBendito.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lyrenhold.dir/src/EscudoBendito.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\EscudoBendito.cpp > CMakeFiles\Lyrenhold.dir\src\EscudoBendito.cpp.i
+
+CMakeFiles/Lyrenhold.dir/src/EscudoBendito.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lyrenhold.dir/src/EscudoBendito.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\EscudoBendito.cpp -o CMakeFiles\Lyrenhold.dir\src\EscudoBendito.cpp.s
+
+CMakeFiles/Lyrenhold.dir/src/EscudoReflectivo.cpp.obj: CMakeFiles/Lyrenhold.dir/flags.make
+CMakeFiles/Lyrenhold.dir/src/EscudoReflectivo.cpp.obj: C:/JaverianaCaliPOO/Lyrenhold/Lyrenhold/src/EscudoReflectivo.cpp
+CMakeFiles/Lyrenhold.dir/src/EscudoReflectivo.cpp.obj: CMakeFiles/Lyrenhold.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Lyrenhold.dir/src/EscudoReflectivo.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lyrenhold.dir/src/EscudoReflectivo.cpp.obj -MF CMakeFiles\Lyrenhold.dir\src\EscudoReflectivo.cpp.obj.d -o CMakeFiles\Lyrenhold.dir\src\EscudoReflectivo.cpp.obj -c C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\EscudoReflectivo.cpp
+
+CMakeFiles/Lyrenhold.dir/src/EscudoReflectivo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lyrenhold.dir/src/EscudoReflectivo.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\EscudoReflectivo.cpp > CMakeFiles\Lyrenhold.dir\src\EscudoReflectivo.cpp.i
+
+CMakeFiles/Lyrenhold.dir/src/EscudoReflectivo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lyrenhold.dir/src/EscudoReflectivo.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\EscudoReflectivo.cpp -o CMakeFiles\Lyrenhold.dir\src\EscudoReflectivo.cpp.s
+
+CMakeFiles/Lyrenhold.dir/src/PocionVeneno.cpp.obj: CMakeFiles/Lyrenhold.dir/flags.make
+CMakeFiles/Lyrenhold.dir/src/PocionVeneno.cpp.obj: C:/JaverianaCaliPOO/Lyrenhold/Lyrenhold/src/PocionVeneno.cpp
+CMakeFiles/Lyrenhold.dir/src/PocionVeneno.cpp.obj: CMakeFiles/Lyrenhold.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Lyrenhold.dir/src/PocionVeneno.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lyrenhold.dir/src/PocionVeneno.cpp.obj -MF CMakeFiles\Lyrenhold.dir\src\PocionVeneno.cpp.obj.d -o CMakeFiles\Lyrenhold.dir\src\PocionVeneno.cpp.obj -c C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\PocionVeneno.cpp
+
+CMakeFiles/Lyrenhold.dir/src/PocionVeneno.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lyrenhold.dir/src/PocionVeneno.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\PocionVeneno.cpp > CMakeFiles\Lyrenhold.dir\src\PocionVeneno.cpp.i
+
+CMakeFiles/Lyrenhold.dir/src/PocionVeneno.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lyrenhold.dir/src/PocionVeneno.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\PocionVeneno.cpp -o CMakeFiles\Lyrenhold.dir\src\PocionVeneno.cpp.s
+
+CMakeFiles/Lyrenhold.dir/src/Cancelacion.cpp.obj: CMakeFiles/Lyrenhold.dir/flags.make
+CMakeFiles/Lyrenhold.dir/src/Cancelacion.cpp.obj: C:/JaverianaCaliPOO/Lyrenhold/Lyrenhold/src/Cancelacion.cpp
+CMakeFiles/Lyrenhold.dir/src/Cancelacion.cpp.obj: CMakeFiles/Lyrenhold.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Lyrenhold.dir/src/Cancelacion.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lyrenhold.dir/src/Cancelacion.cpp.obj -MF CMakeFiles\Lyrenhold.dir\src\Cancelacion.cpp.obj.d -o CMakeFiles\Lyrenhold.dir\src\Cancelacion.cpp.obj -c C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\Cancelacion.cpp
+
+CMakeFiles/Lyrenhold.dir/src/Cancelacion.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lyrenhold.dir/src/Cancelacion.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\Cancelacion.cpp > CMakeFiles\Lyrenhold.dir\src\Cancelacion.cpp.i
+
+CMakeFiles/Lyrenhold.dir/src/Cancelacion.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lyrenhold.dir/src/Cancelacion.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\Cancelacion.cpp -o CMakeFiles\Lyrenhold.dir\src\Cancelacion.cpp.s
+
 # Object files for target Lyrenhold
 Lyrenhold_OBJECTS = \
 "CMakeFiles/Lyrenhold.dir/main.cpp.obj" \
@@ -204,7 +288,13 @@ Lyrenhold_OBJECTS = \
 "CMakeFiles/Lyrenhold.dir/src/ObjetoMagico.cpp.obj" \
 "CMakeFiles/Lyrenhold.dir/src/Sanador.cpp.obj" \
 "CMakeFiles/Lyrenhold.dir/src/Mago.cpp.obj" \
-"CMakeFiles/Lyrenhold.dir/src/Guerrero.cpp.obj"
+"CMakeFiles/Lyrenhold.dir/src/Guerrero.cpp.obj" \
+"CMakeFiles/Lyrenhold.dir/src/PocionVida.cpp.obj" \
+"CMakeFiles/Lyrenhold.dir/src/AmuletoFuria.cpp.obj" \
+"CMakeFiles/Lyrenhold.dir/src/EscudoBendito.cpp.obj" \
+"CMakeFiles/Lyrenhold.dir/src/EscudoReflectivo.cpp.obj" \
+"CMakeFiles/Lyrenhold.dir/src/PocionVeneno.cpp.obj" \
+"CMakeFiles/Lyrenhold.dir/src/Cancelacion.cpp.obj"
 
 # External object files for target Lyrenhold
 Lyrenhold_EXTERNAL_OBJECTS =
@@ -218,11 +308,17 @@ Lyrenhold.exe: CMakeFiles/Lyrenhold.dir/src/ObjetoMagico.cpp.obj
 Lyrenhold.exe: CMakeFiles/Lyrenhold.dir/src/Sanador.cpp.obj
 Lyrenhold.exe: CMakeFiles/Lyrenhold.dir/src/Mago.cpp.obj
 Lyrenhold.exe: CMakeFiles/Lyrenhold.dir/src/Guerrero.cpp.obj
+Lyrenhold.exe: CMakeFiles/Lyrenhold.dir/src/PocionVida.cpp.obj
+Lyrenhold.exe: CMakeFiles/Lyrenhold.dir/src/AmuletoFuria.cpp.obj
+Lyrenhold.exe: CMakeFiles/Lyrenhold.dir/src/EscudoBendito.cpp.obj
+Lyrenhold.exe: CMakeFiles/Lyrenhold.dir/src/EscudoReflectivo.cpp.obj
+Lyrenhold.exe: CMakeFiles/Lyrenhold.dir/src/PocionVeneno.cpp.obj
+Lyrenhold.exe: CMakeFiles/Lyrenhold.dir/src/Cancelacion.cpp.obj
 Lyrenhold.exe: CMakeFiles/Lyrenhold.dir/build.make
 Lyrenhold.exe: CMakeFiles/Lyrenhold.dir/linkLibs.rsp
 Lyrenhold.exe: CMakeFiles/Lyrenhold.dir/objects1.rsp
 Lyrenhold.exe: CMakeFiles/Lyrenhold.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Lyrenhold.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable Lyrenhold.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Lyrenhold.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
