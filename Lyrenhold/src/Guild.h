@@ -5,9 +5,12 @@
 #ifndef GUILD_H
 #define GUILD_H
 #include <list>
-
 #include "Inventario.h"
-
+#include <iostream>
+using std::cout;
+using std::endl;
+using std::cin;
+using std::string;
 
 class Guild {
 private:

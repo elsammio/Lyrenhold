@@ -4,6 +4,11 @@
 
 #ifndef INVENTARIO_H
 #define INVENTARIO_H
+#include <iostream>
+using std::cout;
+using std::endl;
+using std::cin;
+using std::string;
 #include <map>
 
 

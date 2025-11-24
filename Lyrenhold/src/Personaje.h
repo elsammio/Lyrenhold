@@ -4,7 +4,11 @@
 
 #ifndef PERSONAJE_H
 #define PERSONAJE_H
-#include <string>
+#include <iostream>
+using std::cout;
+using std::endl;
+using std::cin;
+using std::string;
 
 
 class Personaje {

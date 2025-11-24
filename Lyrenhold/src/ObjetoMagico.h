@@ -4,7 +4,11 @@
 
 #ifndef OBJETOMAGICO_H
 #define OBJETOMAGICO_H
-#include <string>
+#include <iostream>
+using std::cout;
+using std::endl;
+using std::cin;
+using std::string;
 
 
 class ObjetoMagico {
