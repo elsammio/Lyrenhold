@@ -8,6 +8,9 @@
 
 
 class AmuletoFuria {
+private:
+    int minAumentoDano;
+    int maxAumentoDano;
 
 };
 

@@ -8,7 +8,9 @@
 
 
 class Sanador {
-
+private:
+    int minCura;
+    int maxCura;
 };
 
 

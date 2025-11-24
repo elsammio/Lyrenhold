@@ -8,6 +8,8 @@
 
 
 class Mago {
+private:
+    double ignorarDefensa;
 
 };
 

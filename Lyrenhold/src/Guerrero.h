@@ -8,6 +8,8 @@
 
 
 class Guerrero {
+private:
+    double golpeCritico;
 
 };
 

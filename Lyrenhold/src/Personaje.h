@@ -4,11 +4,20 @@
 
 #ifndef PERSONAJE_H
 #define PERSONAJE_H
-
+#include <string>
 
 
 class Personaje {
-
+private:
+    int idPersonaje;
+    string nombrePersonaje;
+    string descripcionPersonaje;
+    string tipo;
+    string rol;
+    int nivel;
+    int vida;
+    int ataque;
+    int defensa;
 };
 
 

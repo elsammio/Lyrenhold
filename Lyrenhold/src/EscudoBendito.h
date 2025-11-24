@@ -8,7 +8,9 @@
 
 
 class EscudoBendito {
-
+private:
+    int minDefensa;
+    int maxDefensa;
 };
 
 

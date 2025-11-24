@@ -4,10 +4,13 @@
 
 #ifndef OBJETOMAGICO_H
 #define OBJETOMAGICO_H
-
+#include <string>
 
 
 class ObjetoMagico {
+private:
+    string nombreObjetoMagico;
+    string descripcionObjetoMagico;
 
 };
 
