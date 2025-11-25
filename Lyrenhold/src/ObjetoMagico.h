@@ -2,18 +2,33 @@
 // Created by Luis Alejandro Peña on 23/11/2025.
 //
 
-#ifndef OBJETOMAGICO_H
-#define OBJETOMAGICO_H
-#include <string>
+#ifndef OBJETO_MAGICO_H
+#define OBJETO_MAGICO_H
+#include <iostream>
+using std::cout;
+using std::endl;
+using std::getline;
+using std::string;
 
+class Personaje;
 
 class ObjetoMagico {
-private:
+protected:
     string nombreObjetoMagico;
-    string descripcionObjetoMagico;
+    string descripcion;
 
+public:
+    ObjetoMagico(string nombre, string desc);
+    virtual ~ObjetoMagico() {}
+
+    virtual void usar(Personaje* personaje) = 0;
+
+    string getNombre() const;
 };
 
+#endif
 
 
-#endif //OBJETOMAGICO_H
+
+
+

@@ -2,17 +2,25 @@
 // Created by Luis Alejandro Peña on 23/11/2025.
 //
 
-#ifndef POCIONVIDA_H
-#define POCIONVIDA_H
+#ifndef POCION_VIDA_H
+#define POCION_VIDA_H
+#include "ObjetoMagico.h"
+#include <iostream>
+using std::cout;
+using std::endl;
+using std::getline;
+using std::string;
 
-
-
-class PocionVida {
+class PocionVida : public ObjetoMagico {
 private:
     int minCuracion;
     int maxCuracion;
+
+public:
+    PocionVida();
+    PocionVida(int minC, int maxC);
+
+    void usar(Personaje* personaje) override;
 };
 
-
-
-#endif //POCIONVIDA_H
+#endif
