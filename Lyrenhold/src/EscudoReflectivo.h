@@ -8,7 +8,8 @@
 
 
 class EscudoReflectivo {
-
+private:
+    int cantidadReflejo;
 };
 
 

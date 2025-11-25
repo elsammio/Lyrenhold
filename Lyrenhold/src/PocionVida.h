@@ -8,7 +8,9 @@
 
 
 class PocionVida {
-
+private:
+    int minCuracion;
+    int maxCuracion;
 };
 
 

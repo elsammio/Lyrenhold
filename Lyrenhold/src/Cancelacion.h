@@ -8,6 +8,9 @@
 
 
 class Cancelacion {
+    private:
+
+    int turnoCancelado;
 
 };
 

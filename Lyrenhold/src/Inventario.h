@@ -4,10 +4,14 @@
 
 #ifndef INVENTARIO_H
 #define INVENTARIO_H
+<<<<<<< HEAD
 
 #include <iostream>
 #include <map>
 #include <vector>
+=======
+#include <map>
+>>>>>>> 48e9cccc5f36e66f969b4096d8f97f1e0b12605b
 
 using std::string;
 using std::map;
@@ -18,6 +22,7 @@ class ObjetoMagico;
 
 class Inventario {
 private:
+<<<<<<< HEAD
     map<string, int> stock;
     map<Personaje*, vector<ObjetoMagico*>> asignados;
 
@@ -35,6 +40,10 @@ public:
     void cargarJSON(const string& ruta);
 
     ObjetoMagico* crearObjetoPorTipo(const string& tipo);
+=======
+    std::map<string, int> stock;
+    std::map<>asisgnados;
+>>>>>>> 48e9cccc5f36e66f969b4096d8f97f1e0b12605b
 };
 
 #endif //INVENTARIO_H

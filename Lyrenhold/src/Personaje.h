@@ -4,22 +4,34 @@
 
 #ifndef PERSONAJE_H
 #define PERSONAJE_H
+<<<<<<< HEAD
 
 #include <iostream>
+=======
+#include <string>
+>>>>>>> 48e9cccc5f36e66f969b4096d8f97f1e0b12605b
 
 using std::string;
 
 class Personaje {
+<<<<<<< HEAD
 protected:
     int id;
     string nombrePersonaje;
     string desc;
+=======
+private:
+    int idPersonaje;
+    string nombrePersonaje;
+    string descripcionPersonaje;
+>>>>>>> 48e9cccc5f36e66f969b4096d8f97f1e0b12605b
     string tipo;
     string rol;
     int nivel;
     int vida;
     int ataque;
     int defensa;
+<<<<<<< HEAD
 
 public:
     Personaje();
@@ -42,6 +54,8 @@ public:
 
     int getAtaque() const;
     int getDefensa() const;
+=======
+>>>>>>> 48e9cccc5f36e66f969b4096d8f97f1e0b12605b
 };
 
 #endif // PERSONAJE_H

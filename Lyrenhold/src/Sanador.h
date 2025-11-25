@@ -9,6 +9,7 @@
 
 using std::string;
 
+<<<<<<< HEAD
 class Sanador : public Personaje {
 private:
     int minCura;
@@ -24,6 +25,12 @@ public:
     void setMaxCura(int c);
 
     void realizarAccion(Personaje* objetivo) override;
+=======
+class Sanador {
+private:
+    int minCura;
+    int maxCura;
+>>>>>>> 48e9cccc5f36e66f969b4096d8f97f1e0b12605b
 };
 
 #endif //SANADOR_H

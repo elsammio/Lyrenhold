@@ -9,7 +9,11 @@
 
 using std::string;
 
+<<<<<<< HEAD
 class Mago : public Personaje {
+=======
+class Mago {
+>>>>>>> 48e9cccc5f36e66f969b4096d8f97f1e0b12605b
 private:
     double ignorarDefensa;
 

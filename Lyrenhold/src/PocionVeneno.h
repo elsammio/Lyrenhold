@@ -8,7 +8,8 @@
 
 
 class PocionVeneno {
-
+private:
+    int danoPorTurno;
 };
 
 
