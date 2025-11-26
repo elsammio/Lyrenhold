@@ -4,11 +4,6 @@
 #ifndef CANCELACION_H
 #define CANCELACION_H
 #include "ObjetoMagico.h"
-#include <iostream>
-using std::cout;
-using std::endl;
-using std::getline;
-using std::string;
 
 class Cancelacion : public ObjetoMagico {
 private:
@@ -22,5 +17,3 @@ public:
 };
 
 #endif
-
-

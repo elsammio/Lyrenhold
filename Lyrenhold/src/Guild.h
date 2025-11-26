@@ -4,12 +4,13 @@
 
 #ifndef GUILD_H
 #define GUILD_H
-#include <list>
-#include <string>
+
+#include <iostream>
 #include <vector>
-#include "Inventario.h"
-using std::string;
+
 using std::vector;
+using std::string;
+
 class Personaje;
 class Inventario;
 
@@ -20,11 +21,7 @@ private:
     vector<Personaje*> heroes;
     vector<Personaje*> oponentes;
     Inventario* inventario;
-    string nombreGuild;
-    string tipoGuild;
-    std::pmr::list<Personaje>heroe;
-    std::pmr::list<Personaje>oponente;
-    Inventario inventario;
+
 public:
     Guild(string nombre, string tipo);
 

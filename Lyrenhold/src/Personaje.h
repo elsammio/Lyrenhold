@@ -10,7 +10,7 @@ class Personaje {
 protected:
     int id;
     string nombrePersonaje;
-    string descripcion;
+    string desc;
     string tipo;
     string rol;
     int nivel;

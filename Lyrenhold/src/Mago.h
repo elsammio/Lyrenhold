@@ -6,22 +6,20 @@
 #define MAGO_H
 
 #include "Personaje.h"
-
 using std::string;
 
 class Mago : public Personaje {
-    class Mago {
-    private:
-        double ignorarDefensa;
+private:
+    double ignorarDefensa;
 
-    public:
-        Mago(int id, string nombre, string desc, int nivel,
-             int vida, int ataque, int defensa, double ignore);
+public:
+    Mago(int id, string nombre, string desc, int nivel,
+         int vida, int ataque, int defensa, double ignore);
 
-        double getIgnorarDefensa() const;
-        void setIgnorarDefensa(double p);
+    double getIgnorarDefensa() const;
+    void setIgnorarDefensa(double p);
 
-        void realizarAccion(Personaje* objetivo) override;
-    };
+    void realizarAccion(Personaje* objetivo) override;
 };
+
 #endif //MAGO_H

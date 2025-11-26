@@ -5,11 +5,6 @@
 #ifndef AMULETO_FURIA_H
 #define AMULETO_FURIA_H
 #include "ObjetoMagico.h"
-#include <iostream>
-using std::cout;
-using std::endl;
-using std::getline;
-using std::string;
 
 class AmuletoFuria : public ObjetoMagico {
 private:

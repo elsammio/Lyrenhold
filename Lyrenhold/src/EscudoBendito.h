@@ -5,11 +5,6 @@
 #ifndef ESCUDO_BENDITO_H
 #define ESCUDO_BENDITO_H
 #include "ObjetoMagico.h"
-#include <iostream>
-using std::cout;
-using std::endl;
-using std::getline;
-using std::string;
 
 class EscudoBendito : public ObjetoMagico {
 private:

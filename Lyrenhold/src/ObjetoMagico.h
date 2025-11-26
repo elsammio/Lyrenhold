@@ -5,9 +5,6 @@
 #ifndef OBJETO_MAGICO_H
 #define OBJETO_MAGICO_H
 #include <iostream>
-using std::cout;
-using std::endl;
-using std::getline;
 using std::string;
 
 class Personaje;
@@ -27,8 +24,3 @@ public:
 };
 
 #endif
-
-
-
-
-

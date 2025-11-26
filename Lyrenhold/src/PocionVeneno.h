@@ -5,11 +5,6 @@
 #ifndef POCION_VENENO_H
 #define POCION_VENENO_H
 #include "ObjetoMagico.h"
-#include <iostream>
-using std::cout;
-using std::endl;
-using std::getline;
-using std::string;
 
 class PocionVeneno : public ObjetoMagico {
 private:
@@ -23,4 +18,3 @@ public:
 };
 
 #endif
-

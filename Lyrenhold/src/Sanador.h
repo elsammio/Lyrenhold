@@ -6,7 +6,6 @@
 #define SANADOR_H
 
 #include "Personaje.h"
-
 using std::string;
 
 class Sanador : public Personaje {
@@ -24,12 +23,6 @@ public:
     void setMaxCura(int c);
 
     void realizarAccion(Personaje* objetivo) override;
-
-class Sanador {
-private:
-    int minCura;
-    int maxCura;
-
 };
 
 #endif //SANADOR_H
