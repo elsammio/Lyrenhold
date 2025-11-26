@@ -42,6 +42,7 @@ public:
     void setDefensa(int d);
 
     string getNombre() const;
+    int getId() const;
 };
 
 #endif // PERSONAJE_H

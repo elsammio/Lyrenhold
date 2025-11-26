@@ -15,7 +15,7 @@ public:
     PocionVeneno();
     PocionVeneno(const string& nombre,
                  const string& desc,
-                 int danoporturno);
+                 int dano);
 
     void usar(Personaje* personaje) override;
 };

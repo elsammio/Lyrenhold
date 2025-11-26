@@ -31,10 +31,6 @@ public:
     void eliminar(const string& nombre);
     void asignar(Personaje* p, ObjetoMagico* obj);
 
-    void guardarJSON(const string& ruta) const;
-    void cargarJSON(const string& ruta);
-
-    ObjetoMagico* crearObjetoPorTipo(const string& tipo);
 };
 
 #endif //INVENTARIO_H

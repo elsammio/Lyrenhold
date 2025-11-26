@@ -16,7 +16,7 @@ public:
     EscudoReflectivo();
     EscudoReflectivo(const string& nombre,
                      const string& desc,
-                     int danoreflejado);
+                     int cantref);
 
     void usar(Personaje* personaje) override;
 };

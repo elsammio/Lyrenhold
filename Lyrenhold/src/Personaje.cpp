@@ -63,3 +63,7 @@ void Personaje::setDefensa(int d) {
 string Personaje::getNombre() const {
     return nombrePersonaje;
 }
+
+int Personaje::getId() const {
+    return id;
+}

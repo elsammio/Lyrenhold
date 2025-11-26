@@ -19,8 +19,8 @@ double Guerrero::getGolpeCritico() const {
     return golpeCritico;
 }
 
-void Guerrero::setGolpeCritico(double prob) {
-    golpeCritico = prob;
+void Guerrero::setGolpeCritico(double probabilidadgolpecritico) {
+    golpeCritico = probabilidadgolpecritico;
 }
 
 void Guerrero::realizarAccion(Personaje* objetivo) {
@@ -28,8 +28,8 @@ void Guerrero::realizarAccion(Personaje* objetivo) {
 
     int dano = ataque;
 
-    double prob = (double)rand() / RAND_MAX;
-    if (prob < golpeCritico) {
+    double probabilidadgolpecritico = (double)rand() / RAND_MAX;
+    if (probabilidadgolpecritico < golpeCritico) {
         dano *= 2;
         cout << nombrePersonaje << " Da un golpe critico" << endl;
     }

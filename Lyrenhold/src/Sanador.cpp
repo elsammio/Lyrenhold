@@ -3,7 +3,7 @@
 //
 
 #include "Sanador.h"
-#include <cstdlib>
+#include <cstdlib>//permite hacer el uso de rand
 using std::endl;
 using std::cout;
 
@@ -17,8 +17,8 @@ Sanador::Sanador(int id, const string& nombre, const string& desc,
 int Sanador::getMinCura() const { return minCura; }
 int Sanador::getMaxCura() const { return maxCura; }
 
-void Sanador::setMinCura(int c) { minCura = c; }
-void Sanador::setMaxCura(int c) { maxCura = c; }
+void Sanador::setMinCura(int curaminima) { minCura = curaminima; }
+void Sanador::setMaxCura(int curamaxima) { maxCura = curamaxima; }
 
 void Sanador::realizarAccion(Personaje* objetivo) {
     if (!objetivo) return;

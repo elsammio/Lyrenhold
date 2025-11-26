@@ -7,12 +7,11 @@
 
 #include <iostream>
 #include <vector>
+#include "Personaje.h"
+#include "Inventario.h"
 
 using std::vector;
 using std::string;
-
-class Personaje;
-class Inventario;
 
 class Guild {
 private:
@@ -23,7 +22,7 @@ private:
     Inventario* inventario;
 
 public:
-    Guild(string nombre, string tipo);
+    Guild(const string& nombre, const string& tipo);
 
     void agregarPersonaje(Personaje* p);
     void retirarPersonaje(int id);
@@ -36,4 +35,4 @@ public:
     vector<Personaje*> getOponentes() const;
 };
 
-#endif //GUILD_H
+#endif  //GUILD_H

@@ -17,8 +17,8 @@ double Mago::getIgnorarDefensa() const {
     return ignorarDefensa;
 }
 
-void Mago::setIgnorarDefensa(double p) {
-    ignorarDefensa = p;
+void Mago::setIgnorarDefensa(double ignorardefensa) {
+    ignorarDefensa = ignorardefensa;
 }
 
 void Mago::realizarAccion(Personaje* objetivo) {

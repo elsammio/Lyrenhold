@@ -19,7 +19,7 @@ public:
          double ignore);
 
     double getIgnorarDefensa() const;
-    void setIgnorarDefensa(double p);
+    void setIgnorarDefensa(double ignorardefensa);
 
     void realizarAccion(Personaje* objetivo) override;
 };

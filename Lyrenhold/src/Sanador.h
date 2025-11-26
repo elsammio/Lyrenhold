@@ -21,8 +21,8 @@ public:
 
     int getMinCura() const;
     int getMaxCura() const;
-    void setMinCura(int c);
-    void setMaxCura(int c);
+    void setMinCura(int curaminima);
+    void setMaxCura(int curamaxima);
 
     void realizarAccion(Personaje* objetivo) override;
 };

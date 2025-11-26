@@ -13,9 +13,9 @@ EscudoReflectivo::EscudoReflectivo()
 
 EscudoReflectivo::EscudoReflectivo(const string& nombre,
                                    const string& desc,
-                                   int ref)
+                                   int cantref)
     : ObjetoMagico(nombre, desc),
-      cantidadReflejo(ref) {}
+      cantidadReflejo(cantref) {}
 
 void EscudoReflectivo::usar(Personaje* personaje) {
     if (!personaje) return;

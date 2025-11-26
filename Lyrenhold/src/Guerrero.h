@@ -19,7 +19,7 @@ public:
              double crit);
 
     double getGolpeCritico() const;
-    void setGolpeCritico(double prob);
+    void setGolpeCritico(double probabilidadgolpecritico);
 
     void realizarAccion(Personaje* objetivo) override;
 };
