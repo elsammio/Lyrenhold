@@ -9,22 +9,19 @@
 
 using std::string;
 
-<<<<<<< HEAD
 class Mago : public Personaje {
-=======
-class Mago {
->>>>>>> 48e9cccc5f36e66f969b4096d8f97f1e0b12605b
-private:
-    double ignorarDefensa;
+    class Mago {
+    private:
+        double ignorarDefensa;
 
-public:
-    Mago(int id, string nombre, string desc, int nivel,
-         int vida, int ataque, int defensa, double ignore);
+    public:
+        Mago(int id, string nombre, string desc, int nivel,
+             int vida, int ataque, int defensa, double ignore);
 
-    double getIgnorarDefensa() const;
-    void setIgnorarDefensa(double p);
+        double getIgnorarDefensa() const;
+        void setIgnorarDefensa(double p);
 
-    void realizarAccion(Personaje* objetivo) override;
+        void realizarAccion(Personaje* objetivo) override;
+    };
 };
-
 #endif //MAGO_H

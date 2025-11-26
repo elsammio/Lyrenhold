@@ -4,16 +4,10 @@
 
 #ifndef GUERRERO_H
 #define GUERRERO_H
-
 #include "Personaje.h"
-
 using std::string;
 
-<<<<<<< HEAD
 class Guerrero : public Personaje {
-=======
-class Guerrero {
->>>>>>> 48e9cccc5f36e66f969b4096d8f97f1e0b12605b
 private:
     double golpeCritico;
 
