@@ -3,7 +3,9 @@
 //
 #ifndef CANCELACION_H
 #define CANCELACION_H
+
 #include "ObjetoMagico.h"
+using std::string;
 
 class Cancelacion : public ObjetoMagico {
 private:
@@ -11,7 +13,9 @@ private:
 
 public:
     Cancelacion();
-    Cancelacion(int turnoscancelados);
+    Cancelacion(const string& nombre,
+                const string& desc,
+                int turnoscancelados);
 
     void usar(Personaje* personaje) override;
 };

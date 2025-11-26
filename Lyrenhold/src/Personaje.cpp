@@ -25,6 +25,41 @@ void Personaje::ejecutarAccion(Personaje* usuario, Personaje* objetivo) {
 }
 
 void Personaje::usarObjeto(const string& nombreObjeto) {
-    cout << nombrePersonaje << " uso: " << nombreObjeto << endl;
+    cout << nombrePersonaje << " intenta usar: " << nombreObjeto << endl;
 }
 
+int Personaje::getVida() const {
+    return vida;
+}
+
+void Personaje::setVida(int v) {
+    vida = v;
+}
+
+string Personaje::getRol() const {
+    return rol;
+}
+
+string Personaje::getTipo() const {
+    return tipo;
+}
+
+int Personaje::getAtaque() const {
+    return ataque;
+}
+
+void Personaje::setAtaque(int a) {
+    ataque = a;
+}
+
+int Personaje::getDefensa() const {
+    return defensa;
+}
+
+void Personaje::setDefensa(int d) {
+    defensa = d;
+}
+
+string Personaje::getNombre() const {
+    return nombrePersonaje;
+}

@@ -4,7 +4,9 @@
 
 #ifndef ESCUDO_REFLECTIVO_H
 #define ESCUDO_REFLECTIVO_H
+
 #include "ObjetoMagico.h"
+using std::string;
 
 class EscudoReflectivo : public ObjetoMagico {
 private:
@@ -12,9 +14,12 @@ private:
 
 public:
     EscudoReflectivo();
-    EscudoReflectivo(int danoreflejado);
+    EscudoReflectivo(const string& nombre,
+                     const string& desc,
+                     int danoreflejado);
 
     void usar(Personaje* personaje) override;
 };
 
 #endif
+

@@ -4,6 +4,7 @@
 
 #ifndef POCION_VENENO_H
 #define POCION_VENENO_H
+
 #include "ObjetoMagico.h"
 
 class PocionVeneno : public ObjetoMagico {
@@ -12,9 +13,12 @@ private:
 
 public:
     PocionVeneno();
-    PocionVeneno(int danoporturno);
+    PocionVeneno(const string& nombre,
+                 const string& desc,
+                 int danoporturno);
 
     void usar(Personaje* personaje) override;
 };
 
 #endif
+

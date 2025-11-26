@@ -3,8 +3,7 @@
 //
 
 #include "Guerrero.h"
-#include <iostream>
-#include <cstdlib> // para rand()
+#include <cstdlib>
 using std::string;
 using std::endl;
 using std::cout;
@@ -38,5 +37,5 @@ void Guerrero::realizarAccion(Personaje* objetivo) {
     objetivo->setVida(objetivo->getVida() - dano);
 
     cout << nombrePersonaje << " ataca a " << objetivo->getRol()
-         << " generando " << dano << " puntos de daño." << endl;
+         << " generando " << dano << " puntos de dano." << endl;
 }

@@ -4,7 +4,9 @@
 
 #ifndef AMULETO_FURIA_H
 #define AMULETO_FURIA_H
+
 #include "ObjetoMagico.h"
+using std::string;
 
 class AmuletoFuria : public ObjetoMagico {
 private:
@@ -12,11 +14,13 @@ private:
     int maxAumentoDano;
 
 public:
-    AmuletoFuria();
-    AmuletoFuria(int minA, int maxA);
+    AmuletoFuria(const string& nombre,
+                 const string& desc,
+                 int minA, int maxA);
 
     void usar(Personaje* personaje) override;
 };
 
 #endif
+
 

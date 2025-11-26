@@ -36,7 +36,12 @@ public:
     string getTipo() const;
 
     int getAtaque() const;
+    void setAtaque(int a);
+
     int getDefensa() const;
+    void setDefensa(int d);
+
+    string getNombre() const;
 };
 
 #endif // PERSONAJE_H

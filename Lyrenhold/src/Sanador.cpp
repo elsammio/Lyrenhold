@@ -3,10 +3,8 @@
 //
 
 #include "Sanador.h"
-#include <iostream>
-#include <cstdlib> // para rand()
+#include <cstdlib>
 using std::endl;
-using std::string;
 using std::cout;
 
 Sanador::Sanador(int id, const string& nombre, const string& desc,

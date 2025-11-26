@@ -5,6 +5,7 @@
 #ifndef POCION_VIDA_H
 #define POCION_VIDA_H
 #include "ObjetoMagico.h"
+using std::string;
 
 class PocionVida : public ObjetoMagico {
 private:
@@ -12,8 +13,7 @@ private:
     int maxCuracion;
 
 public:
-    PocionVida();
-    PocionVida(int minC, int maxC);
+    PocionVida(const string& nombre,const string& desc,int minC,int maxC);
 
     void usar(Personaje* personaje) override;
 };

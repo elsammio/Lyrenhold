@@ -3,9 +3,7 @@
 //
 
 #include "Mago.h"
-#include <iostream>
 using std::cout;
-using std::string;
 using std::endl;
 
 Mago::Mago(int id, const string& nombre, const string& desc,
@@ -34,5 +32,5 @@ void Mago::realizarAccion(Personaje* objetivo) {
 
     cout << nombrePersonaje << " lanza un hechizo a "
          << objetivo->getRol() << " generando "
-         << dano << " puntos de daño." << endl;
+         << dano << " puntos de dano." << endl;
 }
