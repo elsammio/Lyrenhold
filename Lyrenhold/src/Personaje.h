@@ -19,15 +19,14 @@ protected:
     int defensa;
 
 public:
-    Personaje ();
-    Personaje(int id, string nombre, string desc, string tipo,
-              string rol, int nivel, int vida, int ataque, int defensa);
+    Personaje(int id, const string& nombre, const string& desc, const string& tipo,
+              const string& rol, int nivel, int vida, int ataque, int defensa);
 
     virtual ~Personaje() {}
 
     virtual void realizarAccion(Personaje* objetivo) = 0;
     void ejecutarAccion(Personaje* usuario, Personaje* objetivo);
-    void usarObjeto(const std::string& nombreObjeto);
+    void usarObjeto(const string& nombreObjeto);
 
     bool estaVivo() const;
     int getVida() const;

@@ -14,8 +14,10 @@ private:
     int maxCura;
 
 public:
-    Sanador(int id, string nombre, string desc, int nivel,
-            int vida, int ataque, int defensa, int minC, int maxC);
+    Sanador(int id, const string& nombre, const string& desc,
+            const string& tipo, const string& rol,
+            int nivel, int vida, int ataque, int defensa,
+            int minC, int maxC);
 
     int getMinCura() const;
     int getMaxCura() const;

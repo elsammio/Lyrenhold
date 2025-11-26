@@ -12,7 +12,7 @@ private:
 
 public:
     EscudoReflectivo();
-    EscudoReflectivo(int ref);
+    EscudoReflectivo(int danoreflejado);
 
     void usar(Personaje* personaje) override;
 };

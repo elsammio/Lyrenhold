@@ -12,7 +12,7 @@ private:
 
 public:
     PocionVeneno();
-    PocionVeneno(int d);
+    PocionVeneno(int danoporturno);
 
     void usar(Personaje* personaje) override;
 };

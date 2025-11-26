@@ -11,7 +11,7 @@ private:
 
 public:
     Cancelacion();
-    Cancelacion(int t);
+    Cancelacion(int turnoscancelados);
 
     void usar(Personaje* personaje) override;
 };

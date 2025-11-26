@@ -13,8 +13,10 @@ private:
     double golpeCritico;
 
 public:
-    Guerrero(int id, string nombre, string desc, int nivel,
-             int vida, int ataque, int defensa, double crit);
+    Guerrero(int id, const string& nombre, const string& desc,
+             const string& tipo, const string& rol,
+             int nivel, int vida, int ataque, int defensa,
+             double crit);
 
     double getGolpeCritico() const;
     void setGolpeCritico(double prob);

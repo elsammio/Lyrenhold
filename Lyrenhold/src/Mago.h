@@ -13,8 +13,10 @@ private:
     double ignorarDefensa;
 
 public:
-    Mago(int id, string nombre, string desc, int nivel,
-         int vida, int ataque, int defensa, double ignore);
+    Mago(int id, const string& nombre, const string& desc,
+         const string& tipo, const string& rol,
+         int nivel, int vida, int ataque, int defensa,
+         double ignore);
 
     double getIgnorarDefensa() const;
     void setIgnorarDefensa(double p);
