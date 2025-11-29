@@ -12,13 +12,9 @@ private:
     int danoPorTurno;
 
 public:
-    PocionVeneno();
-    PocionVeneno(const string& nombre,
-                 const string& desc,
-                 int dano);
+    PocionVeneno(const string& nombre, const string& desc, int dano);
 
     void usar(Personaje* personaje) override;
 };
 
 #endif
-

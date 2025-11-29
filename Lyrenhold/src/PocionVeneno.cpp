@@ -4,27 +4,16 @@
 
 #include "PocionVeneno.h"
 #include "Personaje.h"
+#include <iostream>
+
 using std::cout;
 using std::endl;
-using std::string;
 
-PocionVeneno::PocionVeneno()
-    : ObjetoMagico("Poción de Veneno", "envenena al oponente, quitandole puntos de vida."),
-      danoPorTurno(0) {}
-
-PocionVeneno::PocionVeneno(const string& nombre,
-                           const string& desc,
-                           int dano)
-    : ObjetoMagico(nombre, desc),
-      danoPorTurno(dano) {}
+PocionVeneno::PocionVeneno(const string& nombre, const string& desc, int dano)
+    : ObjetoMagico(nombre, desc), danoPorTurno(dano) {}
 
 void PocionVeneno::usar(Personaje* personaje) {
     if (!personaje) return;
-
-    int nuevaVida = personaje->getVida() - danoPorTurno;
-    personaje->setVida(nuevaVida);
-
-    cout << personaje->getNombre()
-         << " sufre " << danoPorTurno
-         << " puntos de dano por veneno.\n";
+    personaje->aplicarEnvenenamiento(danoPorTurno, 3);
+    cout << personaje->getNombre() << " sufre envenenamiento de " << danoPorTurno << " por 3 turnos." << endl;
 }

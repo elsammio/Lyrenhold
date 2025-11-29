@@ -1,15 +1,10 @@
-//
-// Created by CRASHO on 23/11/2025.
-//
-
 #ifndef ARENA_H
 #define ARENA_H
 
 #include <vector>
-#include <iostream>
-
-using std::string;
+#include <string>
 using std::vector;
+using std::string;
 
 class Guild;
 class Personaje;
@@ -20,20 +15,19 @@ private:
     int turnoActual;
     Guild* guild;
     Inventario* inventario;
+    int objetosUsadosContador = 0;
 
 public:
     Arena();
-
     void iniciarCombate(Guild* g);
-    void ejecutarTurno();
-    void procesarAccion(Personaje* p);
-
-    vector<Personaje*> obtenerHeroesVivos();
-    vector<Personaje*> obtenerOponentesVivos();
-
-    bool equipoDerrotado(const vector<Personaje*>& equipo);
+    void ejecutarTurnoUsuario();
+    void ejecutarTurnoEnemigos();
     bool verificarFinCombate();
     string verificarGanador();
+    vector<Personaje*> obtenerHeroesVivos();
+    vector<Personaje*> obtenerOponentesVivos();
+    void mostrarResumenFinal();
+    int getObjetosUsados() const;
 };
 
-#endif //ARENA_H
+#endif

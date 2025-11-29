@@ -3,7 +3,8 @@
 //
 
 #include "ObjetoMagico.h"
-#include "personaje.h"
+#include "Personaje.h"
+
 ObjetoMagico::ObjetoMagico(const string& nombre, const string& desc)
     : nombreObjetoMagico(nombre), desc(desc) {}
 

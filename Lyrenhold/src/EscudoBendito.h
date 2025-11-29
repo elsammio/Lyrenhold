@@ -6,7 +6,6 @@
 #define ESCUDO_BENDITO_H
 
 #include "ObjetoMagico.h"
-using std::string;
 
 class EscudoBendito : public ObjetoMagico {
 private:
@@ -14,9 +13,7 @@ private:
     int maxDefensa;
 
 public:
-    EscudoBendito(const string& nombre,
-                  const string& desc,
-                  int minD, int maxD);
+    EscudoBendito(const string& nombre, const string& desc, int minD, int maxD);
 
     void usar(Personaje* personaje) override;
 };

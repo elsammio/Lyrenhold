@@ -1,22 +1,16 @@
-//
-// Created by Luis Alejandro Peña on 23/11/2025.
-//
-
 #include "Personaje.h"
+#include "Inventario.h"
 #include <iostream>
-using std::string;
+
 using std::cout;
 using std::endl;
+using std::string;
 
-Personaje::Personaje(int id, const string& nombre, const string& desc,
+Personaje::Personaje(int id, const string& nombre,
                      const string& tipo, const string& rol,
                      int nivel, int vida, int ataque, int defensa)
-    : id(id), nombrePersonaje(nombre), desc(desc), tipo(tipo),
+    : id(id), nombrePersonaje(nombre), tipo(tipo),
       rol(rol), nivel(nivel), vida(vida), ataque(ataque), defensa(defensa) {}
-
-bool Personaje::estaVivo() const {
-    return vida > 0;
-}
 
 void Personaje::ejecutarAccion(Personaje* usuario, Personaje* objetivo) {
     if (usuario && objetivo && usuario->estaVivo()) {
@@ -24,46 +18,75 @@ void Personaje::ejecutarAccion(Personaje* usuario, Personaje* objetivo) {
     }
 }
 
-void Personaje::usarObjeto(const string& nombreObjeto) {
-    cout << nombrePersonaje << " intenta usar: " << nombreObjeto << endl;
+void Personaje::usarObjeto(const string& nombreObjeto, Inventario* inv) {
+    if (!inv) {
+        cout << nombrePersonaje << " intenta usar " << nombreObjeto << " pero no hay inventario.\n";
+        return;
+    }
+    bool ok = inv->usarAsignado(this, nombreObjeto);
+    if (!ok) {
+        cout << nombrePersonaje << " no tiene " << nombreObjeto << " asignado o ya fue usado.\n";
+    }
 }
 
-int Personaje::getVida() const {
-    return vida;
+bool Personaje::estaVivo() const {
+    return vida > 0;
 }
 
-void Personaje::setVida(int v) {
-    vida = v;
+int Personaje::getVida() const { return vida; }
+void Personaje::setVida(int v) { vida = v; if (vida < 0) vida = 0; }
+
+string Personaje::getRol() const { return rol; }
+string Personaje::getTipo() const { return tipo; }
+string Personaje::getNombre() const { return nombrePersonaje; }
+int Personaje::getId() const { return id; }
+int Personaje::getNivel() const {return nivel;}
+
+int Personaje::getAtaque() const { return ataque + ataqueBuff; }
+void Personaje::setAtaque(int a) { ataque = a; }
+
+int Personaje::getDefensa() const { return defensa + defensaBuff; }
+void Personaje::setDefensa(int d) { defensa = d; }
+
+void Personaje::aplicarEnvenenamiento(int dano, int turnos) {
+    danoPorTurno = dano;
+    turnosEnvenenado = turnos;
 }
 
-string Personaje::getRol() const {
-    return rol;
+void Personaje::procesarEfectosAlInicioTurno() {
+
+    if (turnosCancelados > 0) {
+        turnosCancelados--;
+    }
+
+    if (turnosEnvenenado > 0) {
+        vida -= danoPorTurno;
+        if (vida < 0) vida = 0;
+        cout << nombrePersonaje << " sufre " << danoPorTurno << " de dano por veneno. (vida ahora: " << vida << ")\n";
+        turnosEnvenenado--;
+        if (turnosEnvenenado == 0) {
+            danoPorTurno = 0;
+        }
+    }
 }
 
-string Personaje::getTipo() const {
-    return tipo;
+bool Personaje::estaCancelado() const {
+    return turnosCancelados > 0;
 }
 
-int Personaje::getAtaque() const {
-    return ataque;
+void Personaje::aplicarCancelacion(int turnos) {
+    turnosCancelados = turnos;
 }
 
-void Personaje::setAtaque(int a) {
-    ataque = a;
+void Personaje::aplicarBuffAtaque(int val, int turnos) {
+    ataqueBuff += val;
+    (void)turnos;
 }
 
-int Personaje::getDefensa() const {
-    return defensa;
+void Personaje::aplicarBuffDefensa(int val, int turnos) {
+    defensaBuff += val;
+    (void)turnos;
 }
 
-void Personaje::setDefensa(int d) {
-    defensa = d;
-}
-
-string Personaje::getNombre() const {
-    return nombrePersonaje;
-}
-
-int Personaje::getId() const {
-    return id;
-}
+int Personaje::getTurnosEnvenenado() const { return turnosEnvenenado; }
+int Personaje::getTurnosCancelados() const { return turnosCancelados; }

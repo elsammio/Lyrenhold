@@ -1,20 +1,14 @@
-//
-// Created by Luis Alejandro Peña on 23/11/2025.
-//
-
 #ifndef MAGO_H
 #define MAGO_H
 
 #include "Personaje.h"
-using std::string;
 
 class Mago : public Personaje {
 private:
     double ignorarDefensa;
 
 public:
-    Mago(int id, const string& nombre, const string& desc,
-         const string& tipo, const string& rol,
+    Mago(int id, const std::string& nombre, const std::string& tipo, const std::string& rol,
          int nivel, int vida, int ataque, int defensa,
          double ignore);
 
@@ -24,4 +18,4 @@ public:
     void realizarAccion(Personaje* objetivo) override;
 };
 
-#endif //MAGO_H
+#endif

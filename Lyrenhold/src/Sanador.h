@@ -1,12 +1,7 @@
-//
-// Created by Luis Alejandro Peña on 23/11/2025.
-//
-
 #ifndef SANADOR_H
 #define SANADOR_H
 
 #include "Personaje.h"
-using std::string;
 
 class Sanador : public Personaje {
 private:
@@ -14,8 +9,7 @@ private:
     int maxCura;
 
 public:
-    Sanador(int id, const string& nombre, const string& desc,
-            const string& tipo, const string& rol,
+    Sanador(int id, const std::string& nombre, const std::string& tipo, const std::string& rol,
             int nivel, int vida, int ataque, int defensa,
             int minC, int maxC);
 
@@ -27,4 +21,4 @@ public:
     void realizarAccion(Personaje* objetivo) override;
 };
 
-#endif //SANADOR_H
+#endif

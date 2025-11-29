@@ -1,32 +1,26 @@
-//
-// Created by Luis Alejandro Peña on 23/11/2025.
-//
-
 #include "Sanador.h"
-#include <cstdlib>//permite hacer el uso de rand
-using std::endl;
-using std::cout;
+#include <cstdlib>
+#include <iostream>
 
-Sanador::Sanador(int id, const string& nombre, const string& desc,
-                 const string& tipo, const string& rol,
+using std::rand;
+using std::cout;
+using std::endl;
+
+Sanador::Sanador(int id, const std::string& nombre, const std::string& tipo, const std::string& rol,
                  int nivel, int vida, int ataque, int defensa,
                  int minC, int maxC)
-    : Personaje(id, nombre, desc, tipo, rol, nivel, vida, ataque, defensa),
+    : Personaje(id, nombre, tipo, rol, nivel, vida, ataque, defensa),
       minCura(minC), maxCura(maxC) {}
 
 int Sanador::getMinCura() const { return minCura; }
 int Sanador::getMaxCura() const { return maxCura; }
-
 void Sanador::setMinCura(int curaminima) { minCura = curaminima; }
 void Sanador::setMaxCura(int curamaxima) { maxCura = curamaxima; }
 
 void Sanador::realizarAccion(Personaje* objetivo) {
-    if (!objetivo) return;
-
+    if (!objetivo || !objetivo->estaVivo()) return;
     int cura = minCura + (rand() % (maxCura - minCura + 1));
-
     objetivo->setVida(objetivo->getVida() + cura);
-
-    cout << nombrePersonaje << " cura a " << objetivo->getRol()
+    cout << getNombre() << " cura a " << objetivo->getNombre()
          << " por " << cura << " puntos." << endl;
 }

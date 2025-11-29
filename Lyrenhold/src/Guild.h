@@ -1,17 +1,13 @@
-//
-// Created by Luis Alejandro Peña on 23/11/2025.
-//
-
 #ifndef GUILD_H
 #define GUILD_H
 
-#include <iostream>
 #include <vector>
-#include "Personaje.h"
+#include <string>
 #include "Inventario.h"
-
 using std::vector;
 using std::string;
+
+class Personaje;
 
 class Guild {
 private:
@@ -23,16 +19,23 @@ private:
 
 public:
     Guild(const string& nombre, const string& tipo);
+    ~Guild();
 
-    void agregarPersonaje(Personaje* p);
-    void retirarPersonaje(int id);
-    void listarPersonajes() const;
-    Personaje* consultarPersonaje(int id) const;
+
+    void agregarHeroe(Personaje* p);
+    void retirarHeroe(int id);
+    void listarHeroes() const;
+    Personaje* consultarHeroe(int id) const;
+    vector<Personaje*> getHeroes() const;
+
+
+    void agregarOponente(Personaje* p);
+    void retirarOponente(int id);
+    void listarOponentes() const;
+    Personaje* consultarOponente(int id) const;
+    vector<Personaje*> getOponentes() const;
 
     Inventario* getInventario() const;
-
-    vector<Personaje*> getHeroes() const;
-    vector<Personaje*> getOponentes() const;
 };
 
-#endif  //GUILD_H
+#endif

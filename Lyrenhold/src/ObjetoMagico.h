@@ -22,6 +22,9 @@ public:
     virtual void usar(Personaje* personaje) = 0;
 
     string getNombre() const;
+
+    // NUEVO: para mostrar descripción en el inventario
+    string getDescripcion() const { return desc; }
 };
 
 #endif
