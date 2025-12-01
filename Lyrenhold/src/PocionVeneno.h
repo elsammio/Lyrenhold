@@ -1,7 +1,3 @@
-//
-// Created by Luis Alejandro Peña on 23/11/2025.
-//
-
 #ifndef POCION_VENENO_H
 #define POCION_VENENO_H
 

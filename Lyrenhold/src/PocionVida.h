@@ -1,7 +1,3 @@
-//
-// Created by Luis Alejandro Peña on 23/11/2025.
-//
-
 #ifndef POCION_VIDA_H
 #define POCION_VIDA_H
 

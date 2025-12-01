@@ -1,23 +1,26 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include "src/Guerrero.h"
-#include "src/Mago.h"
-#include "src/Sanador.h"
-#include "src/PocionVida.h"
-#include "src/AmuletoFuria.h"
-#include "src/EscudoBendito.h"
-#include "src/EscudoReflectivo.h"
-#include "src/PocionVeneno.h"
-#include "src/Cancelacion.h"
-#include "src/Inventario.h"
-#include "src/Guild.h"
-#include "src/Arena.h"
+#include <vector>
+#include <algorithm>
+#include "src\Guerrero.h"
+#include "src\Mago.h"
+#include "src\Sanador.h"
+#include "src\PocionVida.h"
+#include "src\AmuletoFuria.h"
+#include "src\EscudoBendito.h"
+#include "src\EscudoReflectivo.h"
+#include "src\PocionVeneno.h"
+#include "src\Cancelacion.h"
+#include "src\Inventario.h"
+#include "src\Guild.h"
+#include "src\Arena.h"
 
 using std::cout;
 using std::cin;
 using std::endl;
 using std::string;
+using std::vector;
 
 void mostrarPlantillaPersonajesDisponibles() {
     cout << "Personajes disponibles:\n";
@@ -30,6 +33,7 @@ void mostrarPlantillaPersonajesDisponibles() {
     cout << "7) Sanador Pacho\n";
     cout << "8) Sanador Lucho\n";
     cout << "9) Sanadora Lola\n";
+    cout << "Retirar: Esta opcion te permite retirar al ultimo Heroe que escogiste y que puedas escoger otro.\n";
 }
 
 Personaje* crearPersonajePorOpcion(int opt, int id) {
@@ -59,64 +63,94 @@ int main() {
     Inventario* inv = guild.getInventario();
 
     inv->crear(new PocionVida("PocionVida", "Restaura entre 20 y 40 puntos de vida", 20, 40), 3);
-    inv->crear(new AmuletoFuria("AmuletoFuria", "Aumenta el ataque del portador entre 5 y 10 puntos", 5, 10), 2);
-    inv->crear(new EscudoBendito("EscudoBendito", "Aumenta defensa de 10 a 20 puntos.", 10, 20), 2);
-    inv->crear(new EscudoReflectivo("EscudoReflectivo", "Refleja el dano que le hagan al portador.", 15), 1);
-    inv->crear(new PocionVeneno("PocionVeneno", "Resta vida durante 3 turnos, pero hay un factor en contra el daño que se le hace al Personaje rival tambien se le aplica al personaje del jugador que use la pocion al primer turno.", 12), 2);
-    inv->crear(new Cancelacion("Cancelacion", "Cancela 1 turno", 1), 1);
+    inv->crear(new AmuletoFuria("AmuletoFuria", "Aumenta el ataque entre 5 y 10 puntos", 5, 10), 2);
+    inv->crear(new EscudoBendito("EscudoBendito", "Aumenta defensa entre 10 y 20 puntos.", 10, 20), 2);
+    inv->crear(new EscudoReflectivo("EscudoReflectivo", "Refleja el dano recibido.", 15), 1);
+    inv->crear(new PocionVeneno("PocionVeneno", "Resta vida durante 3 turnos.", 12), 2);
+    inv->crear(new Cancelacion("Cancelacion", "incapacita al rival por el resto de la partida", 1), 1);
 
     cout << "Bienvenido al Torneo de Lyrenhold.\n";
-
     cout << "Selecciona 3 heroes para tu guild.\n";
+
     int seleccion;
     int idCounter = 1;
     int chosen = 0;
+
+    vector<int> usados;
+
     while (chosen < 3) {
         mostrarPlantillaPersonajesDisponibles();
-        cout << "Elija al personaje numero " << (chosen+1) << ": ";
+        cout << "Elige al heroe numero " << (chosen+1) << ": ";
         cin >> seleccion;
+
+        if (cin.fail()) {
+            cin.clear();
+            string palabra;
+            cin >> palabra;
+
+            if (palabra == "Retirar") {
+                if (chosen == 0) {
+                    cout << "No hay heroes para retirar.\n";
+                } else {
+                    Personaje* ultimo = guild.getHeroes().back();
+                    cout << "Se retiro del equipo " << ultimo->getNombre() << endl;
+
+                    usados.pop_back();
+
+                    guild.eliminarUltimoHeroe();
+                    chosen--;
+                    idCounter--;
+                }
+                continue;
+            } else {
+                cout << "Opcion invalida.\n";
+                continue;
+            }
+        }
+
+        if (std::find(usados.begin(), usados.end(), seleccion) != usados.end()) {
+            cout << " Ese heroe ya fue escogido, elige otro.\n";
+            continue;
+        }
 
         Personaje* p = crearPersonajePorOpcion(seleccion, idCounter++);
         if (p) {
             guild.agregarHeroe(p);
+            usados.push_back(seleccion);
             chosen++;
             cout << p->getNombre() << " agregado a tu guild.\n";
         } else {
-            cout << "Opción invalida.\n";
+            cout << "Opcion invalida.\n";
         }
     }
-
     guild.agregarOponente(crearOponentePorIndice(1));
     guild.agregarOponente(crearOponentePorIndice(2));
     guild.agregarOponente(crearOponentePorIndice(3));
 
-
     cout << "\nAhora puedes asignar maximo 2 objetos por personaje.\n";
-    for (Personaje* p : guild.getHeroes()) {
 
+    for (Personaje* p : guild.getHeroes()) {
         cout << "\nAsignando objetos a " << p->getNombre() << " maximo 2 objetos\n";
         int asignadas = 0;
 
         while (asignadas < 2) {
-
             cout << "\nInventario actual:\n";
             inv->listar();
-            cout << "- RetirarObjetoMagico : Esta opcion te permite que en caso de no estar seguro sobre tu ultima eleccion de objeto magico lo puedas devolver y escoger otro.\n";
+            cout << "- Retirar: Retira el ultimo objeto magico escogido.\n";
 
             cout << "Ingrese el nombre del objeto a asignar: ";
             string nombre;
             cin >> nombre;
 
-            if (nombre == "RetirarObjetoMagico") {
+            if (nombre == "Retirar") {
                 auto lista = inv->listarAsignados(p);
-
                 if (lista.empty()) {
-                    cout << "No hay objetos que retirar.\n";
+                    cout << "No hay objetos para retirar.\n";
                 } else {
                     string ultimo = lista.back();
                     inv->retirar(p, ultimo);
-                    cout << "Se retiro con exito el objeto: " << ultimo << endl;
-                    asignadas--; // volver a necesitar un objeto
+                    cout << "Se retiro el objeto " << ultimo << endl;
+                    asignadas--;
                 }
                 continue;
             }
@@ -131,7 +165,7 @@ int main() {
             else if (nombre == "PocionVeneno") nuevo = new PocionVeneno("PocionVeneno","",12);
             else if (nombre == "Cancelacion") nuevo = new Cancelacion("Cancelacion","",1);
             else {
-                cout << "Nombre de objeto invalido.\n";
+                cout << "Nombre invalido.\n";
                 continue;
             }
 
@@ -141,7 +175,7 @@ int main() {
                 cout << "No se pudo asignar.\n";
                 delete nuevo;
             } else {
-                cout << " El objeto se asigno.\n";
+                cout << "El objeto se asigno.\n";
                 asignadas++;
             }
         }
@@ -152,7 +186,7 @@ int main() {
 
     do {
         cout << "\n=================================\n";
-        cout << "   TORNEO DE LYRENHOLD\n";
+        cout << "   TORNEO EN LA ARENA DE LYRENHOLD\n";
         cout << "=================================\n";
         cout << "1. Listar personajes, heroes y oponentes\n";
         cout << "2. Listar objetos magicos del inventario\n";
@@ -183,7 +217,7 @@ int main() {
                 break;
 
             case 0:
-                cout << "Saliendo del sistema...\n";
+                cout << "Fin del juego, Muchas gracias por jugar.\n";
                 break;
 
             default:

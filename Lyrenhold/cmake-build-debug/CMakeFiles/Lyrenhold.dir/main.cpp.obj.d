@@ -151,18 +151,33 @@ CMakeFiles/Lyrenhold.dir/main.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
  C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc \
  C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ctime \
- C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src/Guerrero.h \
- C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src/Personaje.h \
- C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src/Mago.h \
- C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src/Sanador.h \
- C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src/PocionVida.h \
- C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src/ObjetoMagico.h \
- C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src/AmuletoFuria.h \
- C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src/EscudoBendito.h \
- C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src/EscudoReflectivo.h \
- C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src/PocionVeneno.h \
- C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src/Cancelacion.h \
- C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src/Inventario.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/vector \
+ C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_uninitialized.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_vector.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_bvector.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/vector.tcc \
+ C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/algorithm \
+ C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_algo.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/algorithmfwd.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_heap.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uniform_int_dist.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_tempbuf.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algo.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algobase.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_algorithm_defs.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/execution_defs.h \
+ C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\Guerrero.h \
+ C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\Personaje.h \
+ C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\Mago.h \
+ C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\Sanador.h \
+ C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\PocionVida.h \
+ C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\ObjetoMagico.h \
+ C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\AmuletoFuria.h \
+ C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\EscudoBendito.h \
+ C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\EscudoReflectivo.h \
+ C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\PocionVeneno.h \
+ C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\Cancelacion.h \
+ C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\Inventario.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/map \
  C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_tree.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/aligned_buffer.h \
@@ -170,11 +185,6 @@ CMakeFiles/Lyrenhold.dir/main.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_map.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multimap.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/erase_if.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/vector \
- C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_uninitialized.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_vector.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_bvector.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/vector.tcc \
- C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src/Guild.h \
- C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src/Inventario.h \
- C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src/Arena.h
+ C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\Guild.h \
+ C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\Inventario.h \
+ C:\JaverianaCaliPOO\Lyrenhold\Lyrenhold\src\Arena.h

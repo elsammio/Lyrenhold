@@ -27,6 +27,9 @@ public:
 
     bool usarAsignado(Personaje* p, const std::string& nombre);
 
+    bool eliminarAsignado(Personaje* p, const std::string& nombre);
+
+
     std::vector<std::string> listarAsignados(Personaje* p) const;
     ObjetoMagico* buscarAsignado(Personaje* p, const std::string& nombre) const;
 

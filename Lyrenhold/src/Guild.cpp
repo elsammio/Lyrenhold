@@ -9,7 +9,6 @@ Guild::Guild(const string& nombre, const string& tipo)
     : nombre(nombre), tipo(tipo), inventario(new Inventario()) {}
 
 Guild::~Guild() {
-
     for (auto p : heroes) delete p;
     for (auto p : oponentes) delete p;
     delete inventario;
@@ -38,7 +37,6 @@ void Guild::listarHeroes() const {
              << " | Ataque: " << p->getAtaque()
              << " | Defensa: " << p->getDefensa()
              << " | Rol: " << p->getRol() << "\n";
-
     }
 }
 
@@ -49,7 +47,14 @@ Personaje* Guild::consultarHeroe(int id) const {
 
 vector<Personaje*> Guild::getHeroes() const { return heroes; }
 
-// Oponentes
+void Guild::eliminarUltimoHeroe() {
+    if (!heroes.empty()) {
+        Personaje* p = heroes.back();
+        heroes.pop_back();
+        delete p;
+    }
+}
+
 void Guild::agregarOponente(Personaje* p) {
     oponentes.push_back(p);
 }

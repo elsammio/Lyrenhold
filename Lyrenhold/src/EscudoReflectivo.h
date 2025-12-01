@@ -1,7 +1,3 @@
-//
-// Created by Luis Alejandro Peña on 23/11/2025.
-//
-
 #ifndef ESCUDO_REFLECTIVO_H
 #define ESCUDO_REFLECTIVO_H
 
@@ -20,4 +16,3 @@ public:
 };
 
 #endif
-

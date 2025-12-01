@@ -10,7 +10,10 @@ Personaje::Personaje(int id, const string& nombre,
                      const string& tipo, const string& rol,
                      int nivel, int vida, int ataque, int defensa)
     : id(id), nombrePersonaje(nombre), tipo(tipo),
-      rol(rol), nivel(nivel), vida(vida), ataque(ataque), defensa(defensa) {}
+      rol(rol), nivel(nivel), vida(vida), ataque(ataque), defensa(defensa)
+{
+    vidaMaxima = vida;
+}
 
 void Personaje::ejecutarAccion(Personaje* usuario, Personaje* objetivo) {
     if (usuario && objetivo && usuario->estaVivo()) {
@@ -34,7 +37,24 @@ bool Personaje::estaVivo() const {
 }
 
 int Personaje::getVida() const { return vida; }
-void Personaje::setVida(int v) { vida = v; if (vida < 0) vida = 0; }
+
+void Personaje::setVida(int v) {
+
+    if (v < vida) {
+        int dano = vida - v;
+        if (defendiendo) {
+            dano /= 2;
+            cout << nombrePersonaje << " reduce el dano al defenderse!\n";
+        }
+        vida = vida - dano;
+    } else {
+        vida = v;
+    }
+
+    if (vida < 0) vida = 0;
+}
+
+int Personaje::getVidaMaxima() const { return vidaMaxima; }
 
 string Personaje::getRol() const { return rol; }
 string Personaje::getTipo() const { return tipo; }
@@ -55,9 +75,7 @@ void Personaje::aplicarEnvenenamiento(int dano, int turnos) {
 
 void Personaje::procesarEfectosAlInicioTurno() {
 
-    if (turnosCancelados > 0) {
-        turnosCancelados--;
-    }
+    defendiendo = false;
 
     if (turnosEnvenenado > 0) {
         vida -= danoPorTurno;
@@ -76,6 +94,7 @@ bool Personaje::estaCancelado() const {
 
 void Personaje::aplicarCancelacion(int turnos) {
     turnosCancelados = turnos;
+    cout << nombrePersonaje << " queda incapacitado por " << turnos << " turno.\n";
 }
 
 void Personaje::aplicarBuffAtaque(int val, int turnos) {
@@ -90,3 +109,13 @@ void Personaje::aplicarBuffDefensa(int val, int turnos) {
 
 int Personaje::getTurnosEnvenenado() const { return turnosEnvenenado; }
 int Personaje::getTurnosCancelados() const { return turnosCancelados; }
+
+
+void Personaje::defender() {
+    defendiendo = true;
+    cout << nombrePersonaje << " adopta una postura defensiva lo que reduce el dano en el siguiente ataque.\n";
+}
+
+bool Personaje::estaDefendiendo() const {
+    return defendiendo;
+}

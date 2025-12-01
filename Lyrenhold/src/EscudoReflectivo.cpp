@@ -1,7 +1,3 @@
-//
-// Created by Luis Alejandro Peña on 23/11/2025.
-//
-
 #include "EscudoReflectivo.h"
 #include "Personaje.h"
 #include <iostream>
@@ -18,4 +14,3 @@ void EscudoReflectivo::usar(Personaje* personaje) {
 }
 
 int EscudoReflectivo::getCantidadReflejo() const { return cantidadReflejo; }
-

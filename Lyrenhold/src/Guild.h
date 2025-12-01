@@ -21,13 +21,13 @@ public:
     Guild(const string& nombre, const string& tipo);
     ~Guild();
 
-
     void agregarHeroe(Personaje* p);
     void retirarHeroe(int id);
     void listarHeroes() const;
     Personaje* consultarHeroe(int id) const;
     vector<Personaje*> getHeroes() const;
 
+    void eliminarUltimoHeroe();
 
     void agregarOponente(Personaje* p);
     void retirarOponente(int id);

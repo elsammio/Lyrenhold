@@ -16,13 +16,17 @@ protected:
     string rol;
     int nivel;
     int vida;
+    int vidaMaxima;
     int ataque;
     int defensa;
+
     int turnosEnvenenado = 0;
     int danoPorTurno = 0;
     int turnosCancelados = 0;
     int ataqueBuff = 0;
     int defensaBuff = 0;
+
+    bool defendiendo = false;
 
 public:
     Personaje(int id, const string& nombre, const string& tipo,
@@ -40,6 +44,8 @@ public:
 
     int getVida() const;
     void setVida(int v);
+
+    int getVidaMaxima() const;
 
     string getRol() const;
     string getTipo() const;
@@ -63,7 +69,9 @@ public:
 
     int getTurnosEnvenenado() const;
     int getTurnosCancelados() const;
+
+    void defender();
+    bool estaDefendiendo() const;
 };
 
 #endif
-

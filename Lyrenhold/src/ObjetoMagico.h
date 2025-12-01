@@ -1,7 +1,3 @@
-//
-// Created by Luis Alejandro Peña on 23/11/2025.
-//
-
 #ifndef OBJETO_MAGICO_H
 #define OBJETO_MAGICO_H
 
@@ -23,7 +19,6 @@ public:
 
     string getNombre() const;
 
-    // NUEVO: para mostrar descripción en el inventario
     string getDescripcion() const { return desc; }
 };
 

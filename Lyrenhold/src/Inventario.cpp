@@ -30,7 +30,6 @@ void Inventario::listar() const {
         string nombre = p.first;
         int cantidad = p.second;
 
-        // Objeto temporal SOLO para obtener descripción
         ObjetoMagico* temp = nullptr;
 
         if (nombre == "PocionVida")
@@ -145,4 +144,21 @@ ObjetoMagico* Inventario::buscarAsignado(Personaje* p, const string& nombre) con
         if (o->getNombre() == nombre) return o;
     }
     return nullptr;
+}
+
+bool Inventario::eliminarAsignado(Personaje* p, const string& nombre) {
+    if (!p) return false;
+
+    auto it = asignados.find(p);
+    if (it == asignados.end()) return false;
+
+    auto &vec = it->second;
+
+    for (auto vit = vec.begin(); vit != vec.end(); ++vit) {
+        if ((*vit)->getNombre() == nombre) {
+            vec.erase(vit);
+            return true;
+        }
+    }
+    return false;
 }

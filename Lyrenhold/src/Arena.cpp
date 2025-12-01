@@ -58,43 +58,63 @@ void Arena::ejecutarTurnoUsuario() {
     cout << "\n===== TURNO " << turnoActual << " HEROES =====\n";
 
     for (auto her : heroes) {
+
         her->procesarEfectosAlInicioTurno();
         if (!her->estaVivo()) continue;
+
         if (her->estaCancelado()) {
-            cout << her->getNombre() << " esta incapacitado por efecto de la cancelacion lo cual hace que pierda su turno.\n";
+            cout << her->getNombre() << " esta incapacitado y pierde su turno.\n";
             continue;
         }
 
         cout << "\nAccion para " << her->getNombre() << " (ID " << her->getId() << "):\n";
         cout << "1) Atacar\n";
         cout << "2) Usar objeto magico\n";
-        cout << "3) Pasar turno\n";
+        cout << "3) Defenderse\n";
         cout << "Opcion: ";
+
         int op;
-        std::cin >> op;
+        cin >> op;
+
         if (op == 1) {
 
-            auto oponentesVivos = obtenerOponentesVivos();
-            cout << "Elija objetivo:\n";
-            for (size_t i = 0; i < oponentesVivos.size(); ++i) {
-                cout << i+1 << ") " << oponentesVivos[i]->getNombre() << " (Vida: " << oponentesVivos[i]->getVida() << ")\n";
+            vector<Personaje*> objetivos;
+
+            if (her->getRol() == "Sanador") {
+                objetivos = obtenerHeroesVivos();
+                cout << "Elija aliado para curar:\n";
+            } else {
+                objetivos = obtenerOponentesVivos();
+                cout << "Elija objetivo enemigo:\n";
             }
-            int sel; std::cin >> sel;
-            if (sel >= 1 && sel <= (int)oponentesVivos.size()) {
-                Personaje* objetivo = oponentesVivos[sel-1];
+
+            for (size_t i = 0; i < objetivos.size(); ++i)
+                cout << i+1 << ") " << objetivos[i]->getNombre()
+                     << " (Vida: " << objetivos[i]->getVida() << ")\n";
+
+            int sel;
+            cin >> sel;
+
+            if (sel >= 1 && sel <= (int)objetivos.size()) {
+
+                Personaje* objetivo = objetivos[sel-1];
                 her->realizarAccion(objetivo);
 
-                ObjetoMagico* reflect = inventario->buscarAsignado(objetivo, "EscudoReflectivo");
-                if (reflect) {
+                if (her->getRol() != "Sanador") {
 
-                    EscudoReflectivo* er = dynamic_cast<EscudoReflectivo*>(reflect);
-                    if (er) {
-                        int reflejo = er->getCantidadReflejo();
-                        her->setVida(her->getVida() - reflejo);
-                        cout << objetivo->getNombre() << " refleja " << reflejo << " de dano a " << her->getNombre() << ".\n";
+                    ObjetoMagico* reflect = inventario->buscarAsignado(objetivo, "EscudoReflectivo");
+                    if (reflect) {
+                        EscudoReflectivo* er = dynamic_cast<EscudoReflectivo*>(reflect);
+                        if (er) {
+                            int reflejo = er->getCantidadReflejo();
+                            her->setVida(her->getVida() - reflejo);
+                            cout << objetivo->getNombre() << " refleja " << reflejo
+                                 << " de dano hacia " << her->getNombre() << ".\n";
+                        }
                     }
                 }
             }
+
         } else if (op == 2) {
 
             auto list = inventario->listarAsignados(her);
@@ -102,51 +122,70 @@ void Arena::ejecutarTurnoUsuario() {
                 cout << "No tiene objetos asignados.\n";
             } else {
                 cout << "Objetos asignados:\n";
-                for (size_t i = 0; i < list.size(); ++i) {
+                for (size_t i = 0; i < list.size(); ++i)
                     cout << i+1 << ") " << list[i] << "\n";
-                }
+
                 cout << "Elija objeto a usar: ";
-                int sel; std::cin >> sel;
+                int sel;
+                cin >> sel;
+
                 if (sel >= 1 && sel <= (int)list.size()) {
+
                     string nombreObj = list[sel-1];
 
                     if (nombreObj == "PocionVida") {
-                        cout << her->getNombre() << " usa " << nombreObj << ".\n";
                         inventario->usarAsignado(her, nombreObj);
                         objetosUsadosContador++;
+                        cout << her->getNombre() << " usa PocionVida.\n";
+
                     } else if (nombreObj == "AmuletoFuria" || nombreObj == "EscudoBendito") {
-                        cout << her->getNombre() << " usa " << nombreObj << ".\n";
                         inventario->usarAsignado(her, nombreObj);
                         objetosUsadosContador++;
+                        cout << her->getNombre() << " usa " << nombreObj << ".\n";
+
                     } else if (nombreObj == "PocionVeneno" || nombreObj == "Cancelacion") {
 
-                        auto oponentesVivos = obtenerOponentesVivos();
+                        vector<Personaje*> objetivos = obtenerOponentesVivos();
                         cout << "Elija objetivo enemigo:\n";
-                        for (size_t i = 0; i < oponentesVivos.size(); ++i)
-                            cout << i+1 << ") " << oponentesVivos[i]->getNombre() << " (Vida: " << oponentesVivos[i]->getVida() << ")\n";
-                        int sel2; std::cin >> sel2;
-                        if (sel2 >= 1 && sel2 <= (int)oponentesVivos.size()) {
-                            Personaje* objetivo = oponentesVivos[sel2-1];
-                            cout << her->getNombre() << " usa " << nombreObj << " sobre " << objetivo->getNombre() << ".\n";
+                        for (size_t i = 0; i < objetivos.size(); ++i)
+                            cout << i+1 << ") " << objetivos[i]->getNombre()
+                                 << " (Vida: " << objetivos[i]->getVida() << ")\n";
+
+                        int sel2;
+                        cin >> sel2;
+
+                        if (sel2 >= 1 && sel2 <= (int)objetivos.size()) {
+
+                            Personaje* objetivo = objetivos[sel2-1];
+                            cout << her->getNombre() << " usa " << nombreObj << " sobre "
+                                 << objetivo->getNombre() << ".\n";
 
                             ObjetoMagico* objptr = inventario->buscarAsignado(her, nombreObj);
                             if (objptr) {
                                 objptr->usar(objetivo);
-                                inventario->usarAsignado(her, nombreObj);
-                                objetosUsadosContador++;
                             }
+
+                            inventario->eliminarAsignado(her, nombreObj);
+                            objetosUsadosContador++;
                         }
+
                     } else if (nombreObj == "EscudoReflectivo") {
-                        cout << her->getNombre() << " activa EscudoReflectivo.\n";
                         inventario->usarAsignado(her, nombreObj);
                         objetosUsadosContador++;
+                        cout << her->getNombre() << " activa EscudoReflectivo.\n";
+
                     } else {
                         cout << "Objeto no reconocido.\n";
                     }
                 }
             }
+
+        } else if (op == 3) {
+            her->defender();
+            cout << her->getNombre() << " adopta postura defensiva.\n";
+
         } else {
-            cout << her->getNombre() << " pasa su turno.\n";
+            cout << "Opcion invalida.\n";
         }
 
         if (verificarFinCombate()) return;
@@ -158,33 +197,57 @@ void Arena::ejecutarTurnoUsuario() {
 void Arena::ejecutarTurnoEnemigos() {
     auto heroes = obtenerHeroesVivos();
     auto oponentes = obtenerOponentesVivos();
+
     if (heroes.empty() || oponentes.empty()) return;
 
     cout << "\n===== TURNO " << turnoActual << " (OPONENTES) =====\n";
 
     for (auto ene : oponentes) {
+
         ene->procesarEfectosAlInicioTurno();
         if (!ene->estaVivo()) continue;
+
         if (ene->estaCancelado()) {
             cout << ene->getNombre() << " esta incapacitado y pierde su turno.\n";
             continue;
         }
 
-        auto heroesVivos = obtenerHeroesVivos();
-        if (heroesVivos.empty()) return;
-        Personaje* objetivo = heroesVivos[rand() % heroesVivos.size()];
+        float porcentajeVida = (float)ene->getVida() / (float)ene->getVidaMaxima();
+
+        if (porcentajeVida <= 0.30f) {
+            ene->defender();
+            cout << ene->getNombre() << " se defiende.\n";
+            continue;
+        }
+
+        vector<Personaje*> objetivos;
+
+        if (ene->getRol() == "Sanador") {
+            objetivos = obtenerOponentesVivos();
+        } else {
+            objetivos = obtenerHeroesVivos();
+        }
+
+        if (objetivos.empty()) return;
+
+        Personaje* objetivo = objetivos[rand() % objetivos.size()];
         cout << ene->getNombre() << " actua sobre " << objetivo->getNombre() << ".\n";
+
         ene->realizarAccion(objetivo);
 
-        ObjetoMagico* reflect = inventario->buscarAsignado(objetivo, "EscudoReflectivo");
-        if (reflect) {
-            EscudoReflectivo* er = dynamic_cast<EscudoReflectivo*>(reflect);
-            if (er) {
-                int reflejo = er->getCantidadReflejo();
-                ene->setVida(ene->getVida() - reflejo);
-                cout << objetivo->getNombre() << " refleja " << reflejo << " de dano a " << ene->getNombre() << ".\n";
+        if (ene->getRol() != "Sanador") {
+            ObjetoMagico* reflect = inventario->buscarAsignado(objetivo, "EscudoReflectivo");
+            if (reflect) {
+                EscudoReflectivo* er = dynamic_cast<EscudoReflectivo*>(reflect);
+                if (er) {
+                    int reflejo = er->getCantidadReflejo();
+                    ene->setVida(ene->getVida() - reflejo);
+                    cout << objetivo->getNombre() << " refleja " << reflejo
+                         << " de dano hacia " << ene->getNombre() << ".\n";
+                }
             }
         }
+
         if (verificarFinCombate()) return;
     }
 
@@ -194,10 +257,15 @@ void Arena::ejecutarTurnoEnemigos() {
 void Arena::mostrarResumenFinal() {
     cout << "\n=== FIN DEL COMBATE ===\n";
     cout << "Equipo ganador: " << verificarGanador() << "\n";
+
     cout << "Heroes supervivientes:\n";
-    for (auto h : obtenerHeroesVivos()) cout << "- " << h->getNombre() << "\n";
+    for (auto h : obtenerHeroesVivos())
+        cout << "- " << h->getNombre() << "\n";
+
     cout << "Oponentes supervivientes:\n";
-    for (auto o : obtenerOponentesVivos()) cout << "- " << o->getNombre() << "\n";
+    for (auto o : obtenerOponentesVivos())
+        cout << "- " << o->getNombre() << "\n";
+
     cout << "Numero total de turnos: " << turnoActual << "\n";
     cout << "Objetos magicos usados: " << objetosUsadosContador << "\n";
 }

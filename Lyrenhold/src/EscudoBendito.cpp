@@ -1,7 +1,3 @@
-//
-// Created by Luis Alejandro Peña on 23/11/2025.
-//
-
 #include "EscudoBendito.h"
 #include "Personaje.h"
 #include <cstdlib>
@@ -18,5 +14,5 @@ void EscudoBendito::usar(Personaje* personaje) {
     if (!personaje) return;
     int aumento = minDefensa + (rand() % (maxDefensa - minDefensa + 1));
     personaje->aplicarBuffDefensa(aumento, 1);
-    cout << personaje->getNombre() << " aumenta su defensa en " << aumento << " punto." << endl;
+    cout << personaje->getNombre() << " aumenta su defensa en " << aumento << " puntos." << endl;
 }
