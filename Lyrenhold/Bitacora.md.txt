@@ -1,16 +1,16 @@
-Fecha         Que decidí                                                Porque lo hice asi                                                                         Responsable
+Que decidí                                                Porque lo hice asi                                                                         Responsable
 
-              Implementar el sistema de objetos mágicos                 La herencia permitio que cada objeto definiera su                                    Luis Alejandro Peña Coral
-              con una clase padre y clases hijas                        comportamiento en el método usar() haciendo que agregar objetos                     
+Implementar el sistema de objetos mágicos                 La herencia permitio que cada objeto definiera su                                    Luis Alejandro Peña Coral
+con una clase padre y clases hijas                        comportamiento en el método usar() haciendo que agregar objetos                     
                                                                         nuevos fuera mas fácil.                                                                 
                                                                                                                                                           
-              Crear el sistema de asignación y uso de objetos           Queria que el modo de escoger los objetos mágicos fuera como el de                   
-              desde el Inventario.                                      un juego que jugaba cuando era pequeño de dragón ball por lo que me inspire          Luis Alejandro Peña Coral
+Crear el sistema de asignación y uso de objetos           Queria que el modo de escoger los objetos mágicos fuera como el de                   
+desde el Inventario.                                      un juego que jugaba cuando era pequeño de dragón ball por lo que me inspire          Luis Alejandro Peña Coral
                                                                         en el para hacer que cuando empiezas el juego además de escoger los personajes          
                                                                         escoges de una vez los objetos mágicos
 
-             Ajustar el comportamiento del Escudo Reflectivo            En algunas ocasiones el escudo reflectivo estaba reflejando el daño cuando no
-             para que reflejara daño solo cuando el enemigo ataque      debia hacerlo por lo que lo tuve que tuve que modificarlo para que funcionara        Luis Alejandro Peña Coral 
+Ajustar el comportamiento del Escudo Reflectivo            En algunas ocasiones el escudo reflectivo estaba reflejando el daño cuando no
+para que reflejara daño solo cuando el enemigo ataque      debia hacerlo por lo que lo tuve que tuve que modificarlo para que funcionara        Luis Alejandro Peña Coral 
                                                                         de forma coherente respecto a la lógica del juego
 
               

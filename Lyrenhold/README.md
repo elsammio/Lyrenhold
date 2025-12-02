@@ -8,7 +8,7 @@ El objetivo es implementar un sistema en C++ que simule combates por turnos en e
 ## Descripción general
 
 En la ciudad de Lyrenhold se celebra cada año el **Gran Torneo de la Arena**, donde distintos **gremios de aventureros (guilds)** compiten por honor y gloria. [attached_file:34]  
-El sistema gestiona una *guild* de héroes, una serie de oponentes y un inventario de objetos mágicos, permitiendo simular combates por turnos con resultados parcialmente aleatorios. [attached_file:34]
+El sistema gestiona una *guild* de héroes, una serie de oponentes y un inventario de objetos mágicos, permitiendo simular combates por turnos. [attached_file:34]
 
 El proyecto busca evidenciar:
 
@@ -22,23 +22,20 @@ El proyecto busca evidenciar:
 
 ### Héroes y oponentes
 
-- Cada personaje (héroe u oponente) tiene al menos: **nombre, nivel, vida, ataque, defensa y rol**. [attached_file:34]
+- Cada personaje (héroe u oponente) tiene: **nombre, nivel, vida, ataque, defensa y rol**. [attached_file:34]
 - Los **héroes** pertenecen a la *guild* del jugador, los **oponentes** a guilds rivales, con conjunto de atributos similar. [attached_file:34]
 - El sistema debe permitir crear nuevos tipos de roles sin romper el diseño general (extensibilidad). [attached_file:34]
 
 Roles recomendados de ejemplo:
 
 - **Guerrero**: daño físico estable, mayor vida y defensa, posibilidad de golpes críticos. [attached_file:34]
-- **Mago**: daño elevado, baja defensa, ataques que pueden ignorar parcialmente la defensa o tener efectos variables (daño extra, quemar, etc.). [attached_file:34]
+- **Mago**: daño elevado, baja defensa, ataques que pueden tener efectos variables (daño extra, quemar, etc.). [attached_file:34]
 - **Sanador**: se centra en curar aliados, con efectividad aleatoria de las curaciones. [attached_file:34]
-
-Se pueden agregar otros roles (por ejemplo, **Hechicero Oscuro**, **Paladín**) siempre que mantengan coherencia con la lógica del sistema. [attached_file:34]
-
 ---
 
 ## Inventario y objetos mágicos
 
-Antes de cada torneo, la *guild* recibe un conjunto limitado de **objetos mágicos** (reliquias de batalla) almacenados en un **inventario global**. [attached_file:34]
+Antes de cada torneo, la *guild* recibe un conjunto limitado de **objetos mágicos** almacenados en un **inventario global**. [attached_file:34]
 
 Reglas principales:
 
@@ -54,20 +51,19 @@ Flujo del inventario:
 
 Ejemplos de objetos mágicos:
 
-- **Poción de Vida**: restaura vida en un rango aleatorio (p. ej. 20–40 puntos). [attached_file:34]
-- **Amuleto de Furia**: aumenta el ataque del héroe durante un turno (p. ej. +5 a +10) con efecto temporal. [attached_file:34]
-- **Escudo Bendito**: incrementa la defensa de forma temporal en un rango aleatorio (p. ej. +10 a +20). [attached_file:34]
+- **Poción de Vida**: restaura vida en un rango aleatorio entre 20–40 puntos. [attached_file:34]
+- **Amuleto de Furia**: aumenta el ataque del héroe durante un turno +5 a +10 con efecto temporal. [attached_file:34]
+- **Escudo Bendito**: incrementa la defensa de forma temporal en un rango aleatorio  +10 a +20. [attached_file:34]
 
-El equipo debe definir al menos **tres objetos adicionales** coherentes con el mundo del torneo. [attached_file:34]
+El equipo debe definio**tres objetos adicionales** siendo estos: pocion vida, pocion veneno, cancelacion. [attached_file:34]
 
 ### CRUD de objetos mágicos
 
-El inventario global soporta al menos:
+El inventario global soporta:
 
-- **Crear**: registrar tipo de objeto, efecto y stock inicial.
-- **Listar/Consultar**: ver detalles del objeto (rango de efecto, usos, stock).
-- **Actualizar**: modificar stock y, opcionalmente, parámetros del efecto (debe explicarse en este README). [attached_file:34]
-- **Eliminar**: solo si el stock es 0.
+- **registrar tipo de objeto, efecto y stock inicial.
+- **Listar/Consultar**: ver detalles del objeto y su stock.
+- **Actualizar**: modificar stock. [attached_file:34]
 - **Asignar/Retirar**: asignar descuenta stock; retirar lo devuelve si el objeto no ha sido usado. [attached_file:34]
 
 ---
@@ -76,21 +72,20 @@ El inventario global soporta al menos:
 
 Al iniciar el programa:
 
-- Se crea automáticamente una **Guild del jugador**, mostrando un mensaje de bienvenida y el estado inicial de sus héroes. [attached_file:34]
-- Se cargan héroes base y enemigos con atributos precargados, para poder ejecutar una batalla sin ingresar datos manualmente. [attached_file:34]
+- Se crea automáticamente un **menu de personajes**, mostrando un mensaje de bienvenida y indicando que hay que seleccionar 3 heroes. [attached_file:34]
+- luego se crea automáticamente un **inventario**, mostrando un mensaje indicando que hay que seleccionar máximo 2 objetos mágicos por los personajes seleccionados anteriormente.  [attached_file:34]
 
-Funcionalidades mínimas:
+Funcionalidades:
 
 - Listar héroes y enemigos.
 - Agregar nuevos personajes.
 - Consultar detalles de un personaje.
-- Retirar personajes de la guild o del conjunto de enemigos, evitando duplicados y garantizando identificadores únicos. [attached_file:34]
+- Retirar personajes de la guild. [attached_file:34]
 
-Validaciones esperadas:
+Validaciones:
 
-- No permitir retirar héroes inexistentes.
-- No iniciar batallas sin héroes vivos disponibles.
-- Al retirar un héroe, debe dejar de aparecer en listados y selección para la arena. [attached_file:34]
+- No permite retirar héroes inexistentes.
+- Al retirar un héroe como para ese momento no ha muerto vuelve a estar disponible para escogerse. [attached_file:34]
 
 ---
 
@@ -100,106 +95,161 @@ La **Arena** es donde se enfrentan los equipos en un combate por turnos. [attach
 
 Características:
 
-- Turnos alternados entre héroes y oponentes.
-- En cada turno un personaje puede: **atacar, curar, defender o usar un objeto mágico**, según su rol. [attached_file:34]
+- Turnos alternados entre 3 héroes y 3 oponentes.
+- En cada turno un personaje puede: **atacar, defender o usar un objeto mágico**, según su rol. [attached_file:34]
 - Los resultados incluyen **aleatoriedad controlada**:
     - Variación del daño (por ejemplo ±10%).
-    - Probabilidad de golpes críticos o fallos.
+    - Probabilidad de golpes críticos.
     - Efectividad variable de curaciones y defensas.
     - Efectos aleatorios de objetos mágicos. [attached_file:34]
 
 Condiciones de fin de combate:
 
-- Un personaje es derrotado cuando su vida llega a 0 o menos.
+- Un personaje es derrotado cuando su vida llega a 0.
 - Un equipo es eliminado cuando todos sus integrantes están derrotados.
 - El combate concluye cuando solo queda con vida al menos un personaje de uno de los equipos. [attached_file:34]
 
-Al finalizar, la Arena debe mostrar un resumen:
+Al finalizar, la Arena muestra un resumen:
 
 - Nombre del equipo ganador.
-- Héroes supervivientes.
+- Heroes supervivientes.
+- rivales supervivientes.
 - Número total de turnos.
-- Objetos mágicos utilizados. [attached_file:34]
+- numero de Objetos mágicos utilizados. [attached_file:34]
 
 ---
 
-## Persistencia de datos
+Diagrama de clases: 
 
-El sistema debe **guardar y cargar** al menos **una categoría de información** en un archivo **JSON** (por ejemplo, héroes, oponentes, objetos o batallas). [attached_file:34]
+classDiagram
 
-- El equipo elige qué categoría persistir y la documenta aquí.
-- La lectura/escritura se hace desde consola, sin librerías externas de UI. [attached_file:34]
+class Personaje {
+    -int id
+    -String nombrePersonaje
+    -string descripcion
+    -String tipo        
+    -String rol      
+    -int nivel
+    -int vida
+    -int ataque
+    -int defensa
+    +realizarAccion(objetivo:Personaje)
+    +ejecutarAccion(usuario:Personaje, objetivo:Personaje)
+    +usarObjeto(nombreObjeto:String)
+    +estaVivo() bool
+}
 
----
+class Guerrero {
+    -double GolpeCritico
+    +getGolpeCritico()
+    +setGolpeCritico(prob:double)
+    +realizarAccion(objetivo:Personaje)
+}
 
-## Alcance técnico
+class Mago {
+    -double IgnorarDefensa
+    +getIgnorarDefensa()
+    +setIgnorarDefensa(p:double)
+    +realizarAccion(objetivo:Personaje)
+}
 
-Requisitos técnicos del proyecto:
+class Sanador {
+    -int minCura
+    -int maxCura
+    +getMinCura()
+    +getMaxCura()
+    +setMinCura(c:int)
+    +setMaxCura(c:int)
+    +realizarAccion(objetivo:Personaje)
+}
 
-- Lenguaje: **C++**, estándar actual del curso.
-- Estructuras de datos: uso visible de `std::vector` y `std::unordered_map`. [attached_file:34]
-- Memoria: manejo con punteros crudos cuando aplique, liberación explícita. [attached_file:34]
-- Interfaz: ejecución por **consola**, sin frameworks gráficos externos.
-- Persistencia: una categoría en formato **JSON**. [attached_file:34]
-- Trabajo en equipo: proyectos en equipos de **2 personas**, con uso continuo de **git** y **GitHub**. [attached_file:34]
+Personaje <|-- Guerrero
+Personaje <|-- Mago
+Personaje <|-- Sanador
 
-Cada *commit* debe incluir un mensaje con la estructura:
+class ObjetoMagico {
+    -String nombreObjetMagico
+    -string Descripcion
+    +usar(personaje:Personaje)
+}
 
-> Qué cambié → Por qué lo hice → Qué espero que mejore. [attached_file:34]
+class PocionVida {
+    -int minCuracion
+    -int maxCuracion
+}
 
----
+class AmuletoFuria {
+    -int minAumentoDano
+    -int maxAumentoDano
+}
 
-## Uso de IA (política del curso)
+class EscudoBendito {
+    -int minDefensa
+    -int maxDefensa
+}
 
-**Permitido**: [attached_file:34]
+class EscudoReflectivo {
+    -int cantidadReflejo
+}
 
-- Consultar dudas de sintaxis C++, STL, lectura/escritura de archivos.
-- Pedir ejemplos para entender cómo resolver aspectos del proyecto.
-- Mejorar mensajes de consola y redacción del README.
+class PocionVeneno {
+    -int danoPorTurno
+}
 
-**No permitido**: [attached_file:34]
+class Cancelacion {
+    -int turnoCancelado
+}
 
-- Delegar el diseño completo de la solución.
-- Solicitar código específico que implemente directamente partes del enunciado.
-- Incluir código que el equipo no entienda o no pueda modificar durante la sustentación.
+ObjetoMagico <|-- PocionVida
+ObjetoMagico <|-- AmuletoFuria
+ObjetoMagico <|-- EscudoBendito
+ObjetoMagico <|-- EscudoReflectivo
+ObjetoMagico <|-- PocionVeneno
+ObjetoMagico <|-- Cancelacion
 
-El proyecto puede ser penalizado si se detecta código no comprendido por el equipo. [attached_file:34]
+Inventario --> "*" ObjetoMagico
+Inventario --> "0..2" Personaje 
 
----
+class Inventario {
+    -Map~String,int~ stock
+    -Map<Personaje,List<ObjetoMagico>> asignados
+    +crear(obj:ObjetoMagico, cant:int)
+    +listar()
+    +consultar(nombre:String)
+    +actualizarStock(nombre:String, cant:int)
+    +eliminar(nombre:String)
+    +asignar(p:Personaje, obj:ObjetoMagico)
+}
 
-## Diagramas UML
+class Guild {
+    -String nombre
+    -string tipo
+    -List~Personaje~ heroes
+    -List~Personaje~ oponentes
+    -Inventario inventario
+    +agregarPersonaje(p:Personaje)
+    +retirarPersonaje(id:int)
+    +listarPersonajes()
+    +consultarPersonaje(id:int)
+}
 
-El repositorio debe incluir diagramas UML en formato **Mermaid**:
+Guild --> "*" Personaje
+Guild --> "1" Inventario
 
-- Versión inicial (antes de programar).
-- Versión ajustada (después de implementar héroes y objetos mágicos).
-- Versión final (después de integrar la Arena). [attached_file:34]
+class Arena {
+    -int turnoActual
+    -Guild guild
+    -Inventario inventario
+    +iniciarCombate(guild:Guild)
+    +ejecutarTurno()
+    +procesarAccion(p:Personaje)
+    +obtenerHeroesVivos() List~Personaje~
+    +obtenerOponentesVivos() List~Personaje~
+    +equipoDerrotado(equipo:List~Personaje~) bool
+    +verificarFinCombate() bool
+    +verificarGanador() String
+}
 
-> Los diagramas se deben actualizar para reflejar el diseño real del código.
-
----
-
-## Bitácora (BITACORA.md)
-
-Cada equipo mantiene un archivo `BITACORA.md` con, al menos, estas columnas: **Fecha**, **Qué decidí**, **Por qué lo hice así**, **Responsable**. [attached_file:34]
-
-- Cada miembro debe aportar **al menos tres entradas** personales.
-- El foco es el **razonamiento** y la reflexión, no solo describir tareas. [attached_file:34]
-
-Ejemplo de entrada:
-
-- 8/nov – Crear clase base `Personaje` – Para aplicar herencia y compartir atributos – Juan Camilo. [attached_file:34]
-
----
-
-## Entregables adicionales
-
-Además del código y este README, el proyecto incluye: [attached_file:34]
-
-- **Video de presentación** (hasta 6 minutos) con:
-    - Descripción breve del proyecto.
-    - Reflexión metacognitiva individual.
-    - Reflexión colaborativa del equipo.
-- **Informe de autoevaluación y coevaluación** (PDF individual).
-- **BITACORA.md** con reflexión de proceso.
-- **Sustentación final** en vivo, realizando cambios sobre el proyecto sin asistencias de IA en el IDE. [attached_file:34]
+Arena --> Guild
+Arena --> "*" Personaje
+Arena --> Inventario
