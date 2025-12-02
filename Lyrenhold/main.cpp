@@ -43,9 +43,9 @@ Personaje* crearPersonajePorOpcion(int opt, int id) {
     if (opt == 4) return new Mago(id, "Motas", "Heroe", "Mago", 3, 80, 35, 5, 0.40);
     if (opt == 5) return new Mago(id, "Darwin", "Heroe", "Mago", 4, 90, 40, 6, 0.40);
     if (opt == 6) return new Mago(id, "Mordecai", "Heroe", "Mago", 5, 100, 45, 7, 0.40);
-    if (opt == 7) return new Sanador(id, "Pacho", "Heroe", "Sanador", 3, 90, 10, 8, 15, 30);
-    if (opt == 8) return new Sanador(id, "Lucho", "Heroe", "Sanador", 3, 90, 10, 8, 15, 30);
-    if (opt == 9) return new Sanador(id, "Lola", "Heroe", "Sanador", 3, 90, 10, 8, 15, 30);
+    if (opt == 7) return new Sanador(id, "Pacho", "Heroe", "Sanador", 3, 90, 10, 15, 15, 30);
+    if (opt == 8) return new Sanador(id, "Lucho", "Heroe", "Sanador", 3, 90, 10, 20, 15, 30);
+    if (opt == 9) return new Sanador(id, "Lola", "Heroe", "Sanador", 3, 90, 10, 25, 15, 30);
     return nullptr;
 }
 

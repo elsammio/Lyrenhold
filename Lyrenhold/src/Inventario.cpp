@@ -33,10 +33,10 @@ void Inventario::listar() const {
         ObjetoMagico* temp = nullptr;
 
         if (nombre == "PocionVida")
-            temp = new PocionVida("PocionVida", "Restaura entre 20 y 40 puntos de vida", 20, 40);
+            temp = new PocionVida("PocionVida", "Restaura entre 20 y 40 puntos de vida.", 20, 40);
 
         else if (nombre == "AmuletoFuria")
-            temp = new AmuletoFuria("AmuletoFuria", "Aumenta el ataque entre 5 y 10 puntos", 5, 10);
+            temp = new AmuletoFuria("AmuletoFuria", "Aumenta el ataque entre 5 y 10 puntos.", 5, 10);
 
         else if (nombre == "EscudoBendito")
             temp = new EscudoBendito("EscudoBendito", "Aumenta defensa entre 10 y 20 puntos.", 10, 20);
@@ -48,7 +48,7 @@ void Inventario::listar() const {
             temp = new PocionVeneno("PocionVeneno", "Resta vida por envenenamiento.", 12);
 
         else if (nombre == "Cancelacion")
-            temp = new Cancelacion("Cancelacion", "Cancela 1 turno", 1);
+            temp = new Cancelacion("Cancelacion", "Incapacita al rival por el resto de la partida.", 1);
 
         if (temp) {
             cout << "- " << nombre << ": " << cantidad
